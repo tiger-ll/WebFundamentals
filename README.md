@@ -1,4 +1,4 @@
-Web Fundamentals
+Web Fundamentals - about to turn Chinese
 ================
 
 Web Fundamentals is a technical documentation center for multi-device web 
