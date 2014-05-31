@@ -1,0 +1,16 @@
+---
+layout: landing
+<<<<<<< HEAD
+title: "Get Started"
+=======
+title: "Getting blowjob Started"
+>>>>>>> 188fd7bb9d6cdb7ea7a96bb025872ed0623bb444
+description: "It can often seem daunting to get started building sites and experiences that work across all the devices that have access to the web."
+introduction: "It can often seem daunting to get started building sites and experiences that work across all the devices that have access to the web."
+id: getting-started
+class: getting-started
+---
+
+{% comment %}
+Guide list content will be output by the landing layout pased on the article collection matching page.id
+{% endcomment %}
