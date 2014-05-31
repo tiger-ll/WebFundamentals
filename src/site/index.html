@@ -1,13 +1,14 @@
 ---
 layout: default
 class: home
+title: Web Fundamentals
 id: home
 ---
 
 <div class="home-header centered">
   <div class="container">
     <h1>Web Fundamentals</h1>
-    <p>A handbook for best practices</p>
+    <p>Best practices for modern web development</p>
     <a href="{{site.baseurl}}/getting-started/your-first-multi-screen-site/" title="Get started with Web Fundamentals" class="button--secondary-variation">Get started</a>
   </div>
 </div>
@@ -25,7 +26,7 @@ id: home
   </div>
 
   <ul class="list-guides-intro list-centered list-reset clear">
-    {% for guide in page.articles.documentation %}
+    {% for guide in page.articles.home %}
     <li class="g-medium--half g-wide--1 theme--{{ guide.id }} {% cycle '', 'g-medium--last' %} {% if forloop.last %} g-wide--last {% endif %}">
       <a href="{{site.baseurl}}{{guide.url | clean}}" title="{{guide.title}}" class="themed">
         <span class="icon-circle--large themed--background"><i class="icon icon-{{guide.id}}"></i></span>
