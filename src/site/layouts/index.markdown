@@ -1,9 +1,9 @@
 ---
 layout: section
-title: "Multi-Device Layouts"
-description: "Start here to learn the fundamentals of responsive design. We've taken a show-and-code approach: showing how design principles look to your users and how to code them."
-introduction: "Don't assume your users prefer one device over another. Provide a great experience no matter what device they choose. Main goal for responsive web design: create sites, apps, and experiences that scale well across all devices."
-snippet: "Create flexible, not fixed, layouts."
+title: "多设备布局"
+description: "我们将从这里开始学习响应式设计的基础：如何运用设计原理以展示给用户，以及如何用代码实现。"
+introduction: "不要假设你的用户们都喜欢使用某一种设备来上网。而无论使用何种设备，设计者都应该让用户得到极佳的体验。响应式网页设计的主旨是：创造出能够自行适应所有设备的网站、应用以及使用体验。"
+snippet: "创造有弹性的, 不是固定的, 布局."
 article:
   written_on: 2014-01-01
   updated_on: 2014-01-06
