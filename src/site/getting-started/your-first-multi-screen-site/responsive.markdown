@@ -1,8 +1,8 @@
 ---
 layout: article
-title: "Make It Responsive"
-description: "The web is accessible on a huge range of devices from small-screen phones to huge-screen televisions. Learn how to build a site that works well across all these devices."
-introduction: "The web is accessible on a huge range of devices from small-screen phones through to huge-screen televisions. Each device presents its own unique benefits and also constraints. As a web developer, you are expected to support all ranges of devices."
+title: "响应式设计"
+description: "互联网是大多数设备都可以访问的，不管是手机还是大型屏幕。在这里你可以学到如何去建立一个在每一个设备上都可以很好的运行的网站。"
+introduction: "互联网是大多数设备都可以访问的，不管是手机还是大型屏幕。每一个设备都有自身的优点以及限制。而作为一个网络开发者，支持所有设备是职责之一。"
 key-takeaways:
   make-responsive:
     - Always use a viewport.

@@ -1,8 +1,7 @@
 ---
 layout: default
-title: "Your First Multi-Screen Site"
-description: "The web is accessible on a huge range of devices from small-screen phones
-to huge-screen televisions. Learn how to build a site that works well across all these devices."
+title: "你的第一个多画面结构网站"
+description: "互联网是大多数设备都可以访问的，不管是手机还是大型屏幕。在这里你可以学到如何去建立一个在每一个设备上都可以很好的运行的网站。"
 article:
   written_on: 2014-01-01
   updated_on: 2014-01-06
@@ -17,7 +16,7 @@ lessonsToc: false
     <div class="container">
       <div class="content">
 
-        <h1>Getting blowjob Started</h1>
+        <h1>开始</h1>
         <h2>{{ page.title }}</h2>
 
         <p class="editorial-header__excerpt">{{page.description}}</p>
@@ -29,16 +28,13 @@ lessonsToc: false
 
 {% wrap content%}
 
-Building multi-screen experiences is not as hard as it sounds. By following
-the lessons in this guide, we will build an example product landing page for our
-[CS256 Mobile Web Development course](https://www.udacity.com/course/cs256)
-that works well across all different device types.
+建立一个多画面结构的体验并不像听着一样困难. 在这个课题当中, 我们会一步一步的建立一个产品介绍页面, 这个页面是为了推广我们的 
+[CS256移动网络开发教程](https://www.udacity.com/course/cs256)，这个页面会在每个设备上都可以运作正常.
 
-## Final product
+## 最终作品
 
-After you've completed the above lessons, you will have produced an excellent product landing
-page that you could use on your own sites.  It will be responsive across
-mobile all the way up to TV.
+在你完成上面那些教程之后, 你就已经做出了一个相当出色的产品页面,并可以运用在任何一个你自己的网站上. 
+这个页面会是响应式的, 支持的范围小至手机大至电视都没有问题.
 
 <figure class="demo clear">
   <img class="g-wide--1 g-medium--half" src="images/narrowsite.jpg" alt="Narrow Viewport final look">
@@ -50,7 +46,7 @@ mobile all the way up to TV.
 
 <div class="container-medium">
   <div class="next-lessons next-lessons--minimal" data-current-lesson="03">
-    <h3><i class="icon icon-lessons"></i> Lessons</h3>
+    <h3><i class="icon icon-lessons"></i> 课程</h3>
 <div markdown="1">
 {% for guide in page.articles.multi-screen %}
 1. [{{guide.title}}]({{site.baseurl}}{{guide.url | clean}}) &mdash;

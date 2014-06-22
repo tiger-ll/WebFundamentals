@@ -1,9 +1,8 @@
 ---
 layout: article
-title: "Create Your Content and Structure"
-description: "Content is the most important aspect of any site. In this guide,
-  we will show how you can quickly plan to build your first multi-screen site."
-introduction: "Content is the most important aspect of any site. So let’s design for the content and not let the design dictate the content. In this guide, we identify the content we need first, create a page structure based on this content, and then present the page in a simple linear layout that works well on narrow and wide viewports."
+title: "创造你自己的结构与内容"
+description: "对任何网站来讲, 网站的内容一直都是最重要的因素之一. 在这个指南当中, 我们会教你如何快速的打造你的第一个多画面结构网站."
+introduction: "对任何网站来讲, 网站的内容一直都是最重要的因素。因此，我们应该为了内容而设计而不是由设计决定内容。在这个指南中，我们先确定我们需要的内容，在此内容的基础上创建一个页面结构，然后在简单的能够适应任何宽度的线性布局中进行展示。"
 notes:
   styling:
     - Styling will come later
@@ -82,158 +81,124 @@ related-guides:
 
 key-takeaways:
   content-critical:
-    - Identify the content you need first.
-    - Sketch out Information Architecture (IA) for narrow and wide viewports.
-    - Create a skeleton view of the page with content but without styling.
+    - 首先确定你需要的内容。
+    - 为宽和窄的视区勾画出信息架构 (Information Architecture,IA)。
+    - 使用内容创建页面的框架，但不添加样式。
 ---
 
 {% wrap content %}
 
 {% include modules/toc.liquid %}
 
-## Create the page structure
+## 创建页面结构
 
-We have identified we need:
+我们需要展示:
 
-1.  An area that describes at a high-level our product "CS256: Mobile web development" course
-2.  A form to collect information from users who are interested in our product
-3.  An in depth description and video
-4.  Images of the product in action
-5.  A data table with information to back the claims up
+1.  一个文本域，能够在高层次描述我们的产品 “CS256: 移动web开发” 教程
+2.  一个表单，收集对我们产品有兴趣的用户的信息
+3.  一个深度的介绍和视频
+4.  使用中的产品的图像
+5.  一个数据表格，用来支持描述的信息
 
 {% include modules/takeaway.liquid list=page.key-takeaways.content-critical %}
 
-We have also come up with a rough information architecture and layout for both
-the narrow and wide viewports.
+我们也为宽和窄的视区画了粗略的信息架构和布局。
 
 <div class="demo clear" style="background-color: white;">
   <img class="g-wide--1 g-medium--half" src="images/narrowviewport.png" alt="Narrow Viewport IA">
   <img  class="g-wide--2 g-wide--last g-medium--half g--last" src="images/wideviewport.png" alt="Wide Viewport IA">
 </div>
 
-This can be converted easily in to the rough sections of a skeleton page that
-we will use for the rest of this project.
+这样可以很容易的转换为在下面的项目中使用的粗略的框架页面。
 
 {% include_code _code/addstructure.html structure %}
 
-## Add content to the page
+## 向页面添加内容
 
-The basic structure of the site is complete. We know the sections we need, the
-content to display in those sections, and where to position it in the overall
-information architecture. We can now start to build out the site.
+网站的基本结构已经完成。我们知道我们需要的部分，在这些部分中要展示的内容，以及在整个信息架构中的位置。我们现在可以开始构建出这个网站了。
 
-{% include modules/remember.liquid title="Note" inline="true" list=page.notes.styling %}
+{% include modules/remember.liquid title="注意" inline="true" list=page.notes.styling %}
 
-### Create the headline and form
+### 创建标题和表单
 
-The headline and request notification form are the critical components of
-our page. These must be presented to the user immediately.
+标题和请求通知的表单是我们页面的关键组件。这些必须要立即展示给用户。  
 
-In the headline, add simple text to describe the course:
+在标题中，添加一些简单的内容去介绍课程。
 
 {% include_code _code/addheadline.html headline %}
 
-We need to also fill out the form.
-It will be a simple form that collects the users' names,
-their phone number, and a good time to call them back.
+我们还需要完成这个表单。它是一个简单的表单，来收集用户名，电话号码和一个适合给他们打电话的时间。
 
-All forms should have labels and placeholders to make it easy for users to
-focus elements, understand what is supposed to go in them, and to also help
-accessibility tools understand the structure of the form.  The name attribute
-not only sends the form value to the server, it is also used to give important
-hints to the browser about how to automatically fill in the form for the user.
+所有表单都应该有标签(label)和占位文字(placeholder)，方便用户能快速锁定焦点，明白他们应该如何填写，以及帮助辅助工具理解表单的结构。
 
-We will add semantic types to make it quick and simple for users to be able to
-enter content on a mobile device.  For example, when entering a telephone
-number, the user should just see a dial pad.
+我们将添加语义类型，使其能在移动设备上快速简单的让用户输入内容。例如，当输入一个电话号码时，用户只应该看到一个拨号键盘。
 
 {% include_code _code/addform.html form %}
 
 {% include modules/related_guides.liquid inline=true list=page.related-guides.create-amazing-forms %}
 
-### Create the Video and Information section
+### 创建视频和信息部分
 
-The Video and Information section of content will contain a little more depth.
-It will have a bulleted list of features of our products and will also contain
-a video placeholder that shows our product working for the user.
+内容中的视频和信息部分会包含更深入的信息。它会包括一个我们产品特性的项目符号列表，也会包含一个视频的占位符，其中展示我们的产品正在为用户工作。
 
 {% include_code _code/addcontent.html section1 %}
 
-Videos are often used to describe content in a more interactive manner and are
-frequently used to show a demonstration of a product or a concept.
+视频通常用一种更加互动的方式来描述内容，通常用来展示一个产品或概念。
 
-By following the best practices, you can easily integrate video in to your site:
+通过遵循最佳实践，你可以很容易的在你的网站上集成视频。
 
-*  Add a `controls` attribute to make it easy for people to play the video.
-*  Add a `poster` image to give people a preview of the content.
-*  Add multiple `<source>` elements based on supported video formats.
-*  Add fall-back text to let people download the video if they can't play it in the window.
+*  添加 `controls` 属性让人更方便的播放视频。
+*  添加 `poster` 图像给用户视频内容的预览。
+*  基于支持的视频格式，添加多个 `<source>` 元素.
+*  添加备用文字让人下载，如果他们不能在窗口内播放。
 
 {% include_code _code/addvideo.html video html %}
 
 {% include modules/related_guides.liquid inline=true list=page.related-guides.video %}
 
-### Create the Images Section
+### 创建图像部分
 
-Sites without images can be a little boring. There are two types of images:
+没有图像的网站会显得有点无聊。网站上有两种类型的图像：
 
-*  Content images &mdash; images that are in-line in the document and are used
-   to convey extra information about the content.
-*  Stylistic images &mdash; images that are used to make the site look
-   better; often these are background images, patterns and gradients.  We will
-   cover this in the [next article]({{site.baseurl}}{{page.article.next.url}}).
+*  内容图像 &mdash; 内联在文档中的图像，用来传递关于内容的额外信息。
+*  样式图像 &mdash; 用来让网站看起来更好看的图像；通常是背景图像，图案和渐变。我们将会在[下一篇文章]({{site.baseurl}}{{page.article.next.url}})中介绍.
 
-The Images section in our page is a collection of content images.
+图像部分是我们会在产品中用到的内容图像的集合。
 
-Content images are critical to conveying the meaning of the page. Think of
-them like the images used in newspaper articles.  The images we are using are
-pictures of the tutors on the project:  Chris Wilson, Peter Lubbers and Sean
-Bennet.
-
+内容图像对传递网页的含义是至关重要的。联想一下报纸文章中使用的图像。
+我们所用的图片是这个项目的导师们，Chris Wilson, Peter Lubbers 和 Sean Bannet。
 {% include_code _code/addimages.html images html %}
 
-The images are set to scale to 100% of the width of the screen. This works
-well on devices with a narrow vieport, but less well on those with a
-wideviewport (like desktop).  We will manage this in the responsive design
-section.
+图像缩放设置为屏幕宽度的100%。这会在移动设备上工作良好，但在桌面上则没那么好。我们将在响应式设计部分解决这个问题。
 
 {% include modules/related_guides.liquid inline=true list=page.related-guides.images %}
 
-### Add the Tabulated Data Section
+### 添加表格化数据部分
 
-The final section is a simple table that is used to show specific product stats
-about the product.
+最后的部分是一个简单的表格，用来显示关于产品的具体产品统计。
 
-Tables should only be used for tabular data, i.e, matrices of information.
+表格应只用来展示表格数据，如信息模型。
 
 {% include_code _code/addcontent.html section3 %}
 
-### Add a Footer
+### 添加一个Footer
 
-Most sites need a footer to display content such as Terms and Conditions,
-disclaimers, and other content that isn't meant to be in the main navigation
-or in the main content area of the page.
+大多数网站需要一个footer来展示某些内容，比如免责声明，使用条款，以及其他的一些不应该放在主导航栏的内容。
 
-In our site, we will just link to Terms and Conditions, a Contact page, and
-our social media profiles.
+在我们的网站上，我们只链接了使用条款，联系页面，以及一个社交媒体简介页面。
 
 {% include_code _code/addcontent.html footer %}
 
-## Summary
+## 总结
 
-We have created the outline of the site and we have identified all the main
-structural elements.  We have also made sure that we have all the relevant
-content ready and in-place to satisfy our business needs.
+我们已经创建了网站的大纲，我们已经确定了所有的主要结构元素。我们也确保我们准备好了所有相关的内容来满足我们的业务需求。
 
 <div class="clear">
   <img class="g-wide--2 g-medium--half" src="images/content.png" alt="Content" style="max-width: 100%;">
   <img  class="g-wide--2 g-wide--last g-medium--half g--last" src="images/narrowsite.png" alt="" style="max-width: 100%;">
 </div>
 
-You will notice that the page looks terrible right now; this is intentional.
-Content is the most important aspect of any site and we needed to make sure we
-had a good solid information architecture and density. This guide has given us
-an excellent base to build upon. We will style our content in the next guide.
+你会注意到现在的页面看起来很糟糕；这是故意的。内容是任何网站中最重要的方面，我们需要确保我们有一个良好坚实的信息架构和密度。本指南已经给我们了一个很好的构建基础。我们将会在下个指南中添加内容的样式。
 
 {% include modules/nextarticle.liquid %}
 
