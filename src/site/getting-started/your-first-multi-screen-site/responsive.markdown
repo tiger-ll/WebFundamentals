@@ -24,64 +24,51 @@ collection: multi-screen
 {% wrap content %}
 
 {% include modules/toc.liquid %}
-
-We are building a site that works across multiple screen sizes and device
-types. In the [previous
-article]({{site.baseurl}}{{page.article.previous.url}}), we crafted the
-Information Architecture of the page and created a basic structure.
-In this guide, we will take our basic structure with content and turn it in to
-a beautiful page that is responsive across a large number of screen sizes.
+我们正在建立一个跨设备并且跨屏幕的网站。在[上一课当中]({{site.baseurl}}{{page.article.previous.url}}), 我们建立了各个页面的内容框架以及基本的结构。在这个教程当中，我们会把我们的框架与内容结合到一起来建立一个漂亮的页面，这个页面会在绝大多数的设备上都会是响应式的。
 
 <div class="clear">
   <figure class="g-wide--2 g-medium--half">
     <img  src="images/content.png" alt="Content" style="max-width: 100%;">
-    <figcaption>{% link_sample _code/content-without-styles.html %} Content and structure {% endlink_sample %} </figcaption>
+    <figcaption>{% link_sample _code/content-without-styles.html %} 内容与结构 {% endlink_sample %} </figcaption>
   </figure>
   <figure class="g-wide--2 g-wide--last g-medium--half g--last">
     <img  src="images/narrowsite.png" alt="Designed site" style="max-width: 100%;">
-    <figcaption>{% link_sample _code/content-with-styles.html %} Final site {% endlink_sample %} </figcaption>
+    <figcaption>{% link_sample _code/content-with-styles.html %} 最终结果 {% endlink_sample %} </figcaption>
   </figure>
 </div>
 
-Following the principles of Mobile First web development,
-we start with a narrow viewport &mdash; similar to a mobile phone &mdash;
-and build for that experience first.
-Then we scale up to larger device classes.
-We can do this by making our viewport wider and
-making a judgment call on whether the design and layout look right.
+遵循移动网络开发的原则，
+我们从一个很窄的viewport &mdash; 跟手机很相似 &mdash;
+我们先从手机开始。
+然后再一步一步的扩展到更大的设备。
+我们可以逐步扩大viewport同时决定设计和布局是否合适来实现。
 
-Earlier we created a couple of different high-level designs for how our content
-should be displayed. Now we need make our page adapt to those different layouts.
-We do this by making a decision on where to place our breakpoints &mdash; a point
-where the layout and styles change &mdash; based on how the contents fits the
-screen-size.
+刚刚我们为我们的内容制作了两个高水准的设计。现在我们要让我们的页面去适应不同的布局。
+我们通过放置断点&mdash;决定结构以及样式&mdash;断点的位置取决于内容如何适应窗口大小。
 
 {% include modules/takeaway.liquid list=page.key-takeaways.make-responsive %}
 
-## Add a viewport
+## 添加一个viewport
+就算是一个非常基础的页面，你 **必须** 一直包括一个viewport meta标签。
+在建立跨设备体验的过程当中，viewport是最重要的一部分。
+没有它，你的站点不会在一个移动设备上正常运转。
 
-Even for a basic page, you **must** always include a viewport meta tag.
-The viewport is the most critical component you need for building multi-device experiences.
-Without it, your site will not work well on a mobile device.
-
-The viewport indicates to the browser that the page needs to be scaled to fit
-the screen.  There are many different configurations that you can specify for
-your viewport to control the display of the page.  As a default, we recommend:
+Viewport决定设备浏览器如何决定窗口是否需要适应网页。有很多设置都可以通过指定viewport来调控页面如何显示。
+我们推荐：
 
 {% include_code _code/viewport.html viewport %}
 
-The viewport lives in the head of the document and only needs to be declared once.
+Viewport的配置只会出现在head当中，并且只需要声明一次。
 
 <div class="related-items">
 <div class="related-items">
 <div class="container">
 <div markdown='1' class="g-wide--push-1 g-medium--push-1">
-### Related information
+### 相关信息
 {: .related-items--title}
-Learn more about the best practices of using the viewport:
-
-*  [Setting the Viewport]({{site.baseurl}}/layouts/rwd-fundamentals/#set-the-viewport)
-*  [Size content to the viewport]({{site.baseurl}}/layouts/rwd-fundamentals/#size-content-to-the-viewport)
+学习更多使用viewport的最佳实践：
+*  [设定Viewport]({{site.baseurl}}/layouts/rwd-fundamentals/#set-the-viewport)
+*  [将内容控制在viewport当中]({{site.baseurl}}/layouts/rwd-fundamentals/#size-content-to-the-viewport)
 {: .list--links}
 
 </div>
@@ -89,17 +76,15 @@ Learn more about the best practices of using the viewport:
 </div>
 </div>
 
-## Apply simple styling
+## 应用简单的样式
 
-Our product and company already has a very specific branding and font guide-lines supplied
-in a style guide.
+我们的公司与产品已经有一个非常详细的品牌推广以及字体使用指南，包含在我们的样式指南当中。
 
-### Style guide
+### 样式指南
 
-A style guide is a useful way to get a high-level understanding of the visual representation
-of the page and it helps you ensure that you are consistent through out the design.
+样式指南是一个非常强大的工具，用来帮助读者对于样式的展现有一个更高层次的理解。并且有助于保持设计的一致性。
 
-#### Colors
+#### 色彩
 
 <div class="styles" style="font-family: monospace;">
   <div style="background-color: #39b1a4">#39b1a4</div>
@@ -110,22 +95,19 @@ of the page and it helps you ensure that you are consistent through out the desi
   <div style="background-color: #dc4d38">#dc4d38</div>
 </div>
 
-### Add stylistic images
+### 添加样式型图片
 
-In the previous guide, we added images called "content images".  These were
-images that were important to the narrative of our product.  Stylistic images
-are images that are not needed as part of the core content but add visual flare
-or help guide the user's attention to a specific piece of content.
+在上一个指南当中，我们添加了一些“内容图片”。这些图片的重要性在于介绍产品。
+样式型图片不是像“内容图像“那样的核心元素，但是可以为页面添加一些视觉元素，
+来引导用户的注意力到选定的内容区域。
 
-A good example of this is a headline image for the 'above the fold' content.  It
-is often used to entice the user to read more about the product.
+其中很好的例子就是用一个标题图片来吸引用户来阅读更多关于产品的内容
 
 <div class="g-wide--2 g-wide--last g-medium--half g--last">
   <img  src="images/narrowsite.png" alt="Designed site" style="max-width: 100%;">
 </div>
 
-They can be very simple to include. In our case, it will be the background to the
-header and we will apply it via some simple CSS.
+添加这个元素可以很简单的做到。在我们的案例当中，它将会是header的背景图片，我们会给它应用一些简单的CSS。
 
 {% highlight css %}
 #headline {
@@ -137,17 +119,16 @@ header and we will apply it via some simple CSS.
 }
 {% endhighlight %}
 
-We have chosen a simple background image that is blurred so it doesn't take away
-from the content and we have set it to `cover` the entire element that way it
-always stretches whilst maintaining the correct aspect ratio.
+我们选择了一个非常简单的背景图片并且应用了一点虚化效果，用来防止用户的注意力被转移。
+并且我们将它设置为"cover"，它的作用就是使该元素会在保持原比例上自由拉伸。
 
 <br style="clear: both;">
 
-## Set your first breakpoint
+## 设置你的第一个断点
 
-The design starts to look bad at about 600px wide.  In our case, the length of
-the line is going above 10 words (the optimal reading length) and that is
-where we want to change it.
+这个设计在600px的时候开始出现显示问题。在我们这个案例中，
+每一行文字都有超过10个单词的长度（最佳阅读长度），
+这就是我们要更改的地方。
 
 <video controls poster="images/firstbreakpoint.png" style="width: 100%;">
   <source src="videos/firstbreakpoint.mov" type="video/mov"></source>
@@ -157,9 +138,8 @@ where we want to change it.
   </p>
 </video>
 
-600px appears to be a good place to create our first breakpoint as it will give us scope
-to reposition elements to make them fit the screen better.  We can do this
-using a technology called [Media Queries]({{site.baseurl}}/layouts/rwd-fundamentals/#use-css-media-queries-for-responsiveness).
+600px似乎是一个很好的出发点，它会给我们一个范围来规划元素的位置。我们可以通过一个技术叫做
+[Media Queries]({{site.baseurl}}/layouts/rwd-fundamentals/#use-css-media-queries-for-responsiveness)。
 
 {% highlight css %}
 @media (min-width: 600px) {
@@ -167,13 +147,11 @@ using a technology called [Media Queries]({{site.baseurl}}/layouts/rwd-fundament
 }
 {% endhighlight %}
 
-There is more space on a larger screen so there is more flexibility with how
-content can be displayed.
+在一个更大的显示设备上，可以更灵活的来布局内容。
 
 {% include modules/remember.liquid title="Note" list=page.notes.not-all-at-once %}
 
-In the context of our product page, it looks like we will
-need to:
+在我们的产品页面当中，看起来我们需要做：
 
 *  Constrain the maximum width of the design.
 *  Alter the padding of elements and reduce the text size.
