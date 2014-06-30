@@ -33,7 +33,7 @@ remember:
     - <a href="../../performance/optimizing-content-efficiency/">Optimizing content efficiency</a>
 ---
 
-{% wrap content%}
+{% wrap content %}
 
 {% include modules/toc.liquid %}
 

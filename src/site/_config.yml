@@ -1,6 +1,6 @@
 safe: false
 port: 8081
-source: ./src/site/
+source: .
 destination: ../appengine/build/static
 markdown: kramdown
 permalink: /articles/:title.html
