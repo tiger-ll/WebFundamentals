@@ -153,47 +153,44 @@ Viewport的配置只会出现在head当中，并且只需要声明一次。
 
 在我们的产品页面当中，看起来我们需要做：
 
-*  Constrain the maximum width of the design.
-*  Alter the padding of elements and reduce the text size.
-*  Move the form to float in-line with the heading content.
-*  Make the video float around the content.
-*  Reduce the size of the images and have them appear in a nicer grid.
+*  限制最大宽度。
+*  修改元素的padding以及缩小字码。
+*  使表格与标题内容float对齐。
+*  使视频始终float在内容周围。
+*  缩小图片大小并且让他们出现在更好的格局里面。
 
 <div class="related-items">
 <div class="related-items">
 <div class="container">
 <div markdown='1' class="g-wide--push-1 g-medium--push-1">
-### Related information
+### 相关内容
 {: .related-items--title}
 
-Learn more about how and where to use Media Queries:
+学习更多关于Media Queries:
 
-*  [Using Media Queries]({{site.baseurl}}/layouts/rwd-fundamentals/#use-css-media-queries-for-responsiveness)
-*  [Layout patterns]({{site.baseurl}}/layouts/rwd-patterns/)
-*  [Mostly Fluid layout]({{site.baseurl}}/layouts/rwd-patterns/#mostly-fluid)
+*  [使用Media Queries]({{site.baseurl}}/layouts/rwd-fundamentals/#use-css-media-queries-for-responsiveness)
+*  [布局模式]({{site.baseurl}}/layouts/rwd-patterns/)
+*  [将近流动式布局]({{site.baseurl}}/layouts/rwd-patterns/#mostly-fluid)
 {: .list--links}
 </div>
 </div>
 </div>
 </div>
 
-## Constrain the maximum width of the design
+## 限制最大宽度。
 
-We have chosen to have only two major layouts: a narrow viewport and a wide
-viewport, which greatly simplifies our build process.
+我们只选择两个主要布局方式：一个窄viewport和一个宽viewport，两者都可以大幅度的将建立过程简单化。
 
-We have also decided to create full-bleed sections on the narrow viewport that
-stay full-bleed on the wide viewport.  This means we should constrain the
-maximum width of the screen so that the text and paragraphs don't extend into one
-long, single line on ultra-wide screens.  We have chosen this point to be
-about 800px.
+同时我们也决定创建“出血”区域，这个区域无论在窄的或者宽的viewport下都会保持完全“出血”。
+这意味着我们应该限制最大宽度，这样文本以及段落就不会在大型屏幕上拉伸至一行。
+我们将最大值定在800px左右。
 
-To achieve this, we need to constrain the width and center the elements.  We
-need  to create a container around each major section and apply a `margin:
-auto`.  This will allow the screen to grow but the content remain centered
-and at a maximum size of 800px.
+为了实现它，我们需要限制它的宽度并且将其置中。
+我们需要在每个部分外层都创建一个container，并且应用"margin:auto"。
+这会允许在屏幕改变大小的情况下（最大800px）内容区域保持置中。
 
-The container will be a simple `div` in the following form:
+
+这个container会包含一个简单的 `div` 在下面的表格当中:
 
 {% highlight html %}<div class="container">...</div>{% endhighlight %}
 
@@ -201,44 +198,33 @@ The container will be a simple `div` in the following form:
 
 {% include_code _code/fixingfirstbreakpoint.html container css %}
 
-## Alter the padding and reduce text size
+## 修改元素的padding以及缩小字码。
 
-On the narrow viewport, we don't have a lot of space to display content so
-the size and weight of the typography is often drastically reduced to fit the
-screen.
+在窄viewport上，我们没有很多的空间去放置内容，所以字体的大小以及粗细都会被大幅度缩小来适应屏幕。
 
-With a larger viewport, we need to consider that the user is more likely to be
-on a larger screen but further away.  To increase the readability of the
-content, we can increase the size and weight of the typography and we can also
-alter the padding to make distinct areas stand out more.
+在一个大的viewport上，我们需要考虑用户在大多数情况下都是离屏幕有一段距离的。
+为了提高内容的可读性，我们可以加大或者加粗字体，或者更改padding来让选定的区域更突出。
 
-In our product page, we will increase the padding of the section elements by
-setting it to remain at 5% of the width.  We will also increase the size of
-the headers for each of the sections.
+在我们的产品页面，我们会增加区域元素之间的padding到5%。同时我们会放大每个区域的抬头。
 
 {% include_code _code/fixingfirstbreakpoint.html padding css %}
 
-## Adapt elements to wide viewport
+## 使元素适应宽viewport
 
-Our narrow viewport was a stacked linear display.  Each major section and the content
-inside them was displayed in order from top to bottom.
+我们的窄viewport是一个纵向的堆积显示模式。每一个区域与其中的内容都是从上到下来显示的。
 
-A wide viewport gives us extra space to use to display the content in an optimal way
-for that screen.  For our product page, this means that according to our IA we can:
+一个宽的viewport给我们很多的空间来摆放内容，保证它摆放在一个最佳位置。在我们的产品页面，根据我们的IA总结出我们可以：
 
-*  Move the form around the header information.
-*  Position the video to the right of the key points.
-*  Tile the images.
-*  Expand the table.
+*  将表格放置在抬头附近。
+*  将视频放置在重点右边。
+*  平铺图像。
+*  扩大表格。
 
-### Float the Form element
+### Float表单元素
 
-The narrow viewport means that we have a lot less horizontal space available for
-us to comfortably position elements on the screen.
+窄viewport意味着，我们在相比之下有很少的横向空间，来让我们随意的在屏幕上摆放元素。
 
-To make more effective use of the horizontal screen space, we need to break out
-of the  the linear flow of the header and move the form and list to be next
-to each other.
+来更有效的运用横向空间，我们需要打破抬头的线性流程，并且将表单与列表放在一起。
 
 {% include_code _code/fixingfirstbreakpoint.html formfloat css %}
 
@@ -247,50 +233,42 @@ to each other.
 <video controls poster="images/floatingform.png" style="width: 100%;">
   <source src="videos/floatingform.mov" type="video/mov"></source>
   <source src="videos/floatingform.webm" type="video/webm"></source>
-  <p>Sorry your browser doesn't support video.
-     <a href="videos/floatingform.mov">Download the video</a>.
+  <p>对不起，您的浏览器无法播放视频。
+     <a href="videos/floatingform.mov">下载视频</a>.
   </p>
 </video>
 
-### Float the Video element
+### Float视频元素
 
-The video in the narrow viewport interface is designed  to be the full width of
-the screen and positioned after the list of key features. On a wide viewport,
-the video will scale up to be too large and look incorrect when placed next
-to our list of features.
+在窄viewport界面当中，视频的宽度是设定为屏幕的宽度，并且放置在要点列表后面。
+在一个宽viewport上面，如果视频放置在要点列表后，会导致视频过度放大并且出现显示问题。
 
-The video element needs to be moved out of the vertical flow of the narrow
-viewport and should be displayed side-by-side with the bulleted list of content.
+视频元素需要从窄viewport的纵向流程中移除，应该放置与内容列表对齐。
 
 {% include_code _code/fixingfirstbreakpoint.html floatvideo css %}
 
-### Tile the Images
+### 平铺图片
 
-The images in the narrow viewport (mobile devices mostly) interface are set to
-be  the full width of the screen and stacked vertically.  This doesn't scale
-well on a wide viewport.
+在窄viewport当中（大部分为移动设备），其界面是设定为屏幕的满宽度并且纵向叠加，
+这样并不会在宽viewport中正常适应。
 
-To make the images look correct on the a wide viewport, they are scaled to 30%
-of the container width and laid out horizontally (rather than vertically in
-the narrow view). We will also add some border radius and box-shadow to make
-the images look more appealing.
+为了让图片在宽viewport中显示正常，他们会被缩小至container宽度的30%并且横向排列（与纵向叠加对立）。
+我们会添加一些border radius与box-shadow来让图片看着更漂亮一些。
 
 <img src="images/imageswide.png" style="width:100%">
 
 {% include_code _code/fixingfirstbreakpoint.html tileimages css %}
 
-### Make images responsive to DPI
+### 使图片与DPI相应
 
-When using images,
-take the size of the viewport and the density of the display into consideration.
+当使用图片的时候,
+要将viewport的大小以及设备的清晰度加入考虑当中。
 
-The web was built for 96dpi screens.  With the introduction of mobile devices,
-we have seen a huge increase in the pixel density of screens not to mention
-Retina class displays on laptops.  As such, images that are encoded to 96dpi
-often look terrible on a hi-dpi device.
+互联网是为了96dpi的屏幕所设计的。随着移动设备的面世，我们见证了屏幕清晰度的巨大提升，更不用提笔记本电脑的视网膜显示。
+正因如此，96dpi的图片在高像素的设备上通常都看着很糟糕。
 
-We have a solution that is not widely adopted yet.
-For browsers that support it, you can display a high density image on a high density display.
+我们有一个还未完全推广的解决方案。
+对于支持这个功能的浏览器，你可以在高清屏幕上显示高清图片。
 
 {% highlight html %}
 <img src="photo.png" srcset="photo@2x.png 2x">
@@ -300,13 +278,13 @@ For browsers that support it, you can display a high density image on a high den
 <div class="related-items">
 <div class="container">
 <div markdown='1' class="g-wide--push-1 g-medium--push-1">
-### Related information
+### 相关信息
 {: .related-items--title}
 
-Learn how to effectively use images for varying screen densities:
+更多viewport的最佳实践：
 
-* [Enhance imgs with srcset for high DPI devices]({{site.baseurl}}/media/images/#enhance-imgs-with-srcset-for-high-dpi-devices)
-* [Use media queries to provide high res images or art direction]({{site.baseurl}}/media/images/#use-media-queries-to-provide-high-res-images-or-art-direction)
+* [使用srcset来实现针对高DPI设备的图片优化]({{site.baseurl}}/media/images/#enhance-imgs-with-srcset-for-high-dpi-devices)
+* [使用media queries来提供高分辨率图片或者艺术指导]({{site.baseurl}}/media/images/#use-media-queries-to-provide-high-res-images-or-art-direction)
 {: .list--links}
 
 </div>
@@ -314,44 +292,39 @@ Learn how to effectively use images for varying screen densities:
 </div>
 </div>
 
-### Tables
+### 表格
 
-Tables are very hard to get right on devices that have a narrow viewport and need
-special consideration.
+在窄viewport的移动设备上正确显示表格并不是一件很容易的事情，要实现这个目标需要考虑特殊的需求。
 
-We recommend on a narrow viewport that you make your table into two rows,
-transposing the heading and cells in a row to make the columnar.
+在窄viewport上，我们推荐将表格分为两行，排列标题与表格单元来形成柱形图。
 
 <video controls poster="images/responsivetable.png" style="width: 100%;">
   <source src="videos/responsivetable.mov" type="video/mov"></source>
   <source src="videos/responsivetable.webm" type="video/webm"></source>
-  <p>Sorry your browser doesn't support video.
-     <a href="videos/responsivetable.mov">Download the video</a>.
+  <p>对不起，您的浏览器无法播放视频。
+     <a href="videos/responsivetable.mov">下载视频</a>.
   </p>
 </video>
 
-In our site,
-we had to create an extra breakpoint just for the table content.
-When you build for a mobile device first, it is harder to undo applied styles,
-so we must section off the narrow viewport table CSS from the wide viewport css.
-This gives us a clear and consistent break.
+在我们的站点上,
+我们需要为表格单独建立一个断点。
+当你在为一个移动设备建造站点的时候，很难去剔除已经应用的样式，
+所以我们必须把窄viewport的表格CSS文件与宽viewport区分开来。
+才能有一个清晰并且统一的断点。
 
 {% include_code _code/content-with-styles.html table-css css %}
 
-## Wrapping up
+## 结尾
 
-**CONGRATULATIONS.** By the time you read this, you will have created your
-first simple product landing page that works across a large range of devices,
-form-factors, and screen sizes.
+**恭喜。** 当你读到这里的时候，你已经建立了你的第一个单页产品页面，这个页面会在绝大多数的移动设备上正常显示，包括适应外型以及不同的屏幕大小。
 
-If you follow these guidelines, you will be off to a good start:
+如果你有遵循这些指南，你应该已经有了一个很好的开始：
 
-1.  Create a basic IA and understand your content before you code.
-2.  Always set a viewport.
-3.  Create your base experience around mobile-first approach.
-4.  Once you have your mobile experience, increase the width of the display
-   until it doesn't look right and set your breakpoint there.
-5.  Keep iterating.
+1.  创建了一个基础的IA并且在写代码之前已经对内容有一定的理解。
+2.  总是设置一个viewport。
+3.  在移动设备优先的前提上打造你的基础体验。
+4.  在完成了移动设备体验之后，慢慢放大viewport直到结构出现问题，并且设定新的断点。
+5.  重复上述步骤。
 
 {% include modules/nextarticle.liquid %}
 
