@@ -1,8 +1,8 @@
 ---
 layout: article
-title: "Image optimization"
-description: "Images often account for most of the downloaded bytes on a web page and also often occupy a significant amount of visual space. As a result, optimizing images can often yield some of the largest byte savings and performance improvements for your website: the fewer bytes the browser has to download, the less competition there is for the client's bandwidth and the faster the browser can download and render useful content on the screen."
-introduction: "Images often account for most of the downloaded bytes on a web page and also often occupy a significant amount of visual space. As a result, optimizing images can often yield some of the largest byte savings and performance improvements for your website: the fewer bytes the browser has to download, the less competition there is for the client's bandwidth and the faster the browser can download and render useful content on the screen."
+title: "图片优化"
+description: "图片作为占据视觉空间最多的一个元素，同时也占用了大部分的下载量，优化图片通常可以大幅度的节省下载量，进而提升性能：浏览器需要下载的字节量越小，用户端的带宽空间会更富裕，可以更快速的下载并且加载有用的信息。"
+introduction: "图片作为占据视觉空间最多的一个元素，同时也占用了大部分的下载量，优化图片通常可以大幅度的节省下载量，进而提升性能：浏览器需要下载的字节量越小，用户端的带宽空间会更富裕，可以更快速的下载并且加载有用的信息。"
 article:
   written_on: 2014-05-07
   updated_on: 2014-05-10
@@ -71,27 +71,28 @@ notes:
 
 {% include modules/toc.liquid %}
 
-Image optimization is both an art and science: an art because there is no one definitive answer for how best to compress an individual image, and a science because there are many well developed techniques and algorithms that can significantly reduce the size of an image. Finding the optimal settings for your image requires careful analysis along many dimensions: format capabilities, content of encoded data, quality, pixel dimensions, and more.
+图片优化是一门科学，同时也是一门艺术：称之为艺术是因为现在还没有绝对的答案来决定一个图片是否充分优化，称之为科学是因为目前有非常多成熟的开发工具以及算法。
+选择一个最佳的优化方案需要对以下方面有细致的分析：格式能力，编码数据的内容，质量，像素尺寸等。
 
-## Eliminating and replacing images
+## 删除和替换图片
 
 {% include modules/takeaway.liquid list=page.key-takeaways.replace %}
 
-The very first question you should ask yourself is whether an image is, in fact, required to achieve the effect you are after. Good design is simple and will also always yield the best performance. If you can eliminate an image resource, which often requires a large number of bytes relative to HTML, CSS, JavaScript and other assets on the page, then that is always the best optimization strategy. That said, a well-placed image can also communicate more  information than a thousand words, so it is up to you to find that balance.
+你需要问自己的第一个问题就是，这个图片是否需要优化。一个好的设计是简单的，也是性能最强的。如果可以将图片从资源中删除掉，会帮助腾出几百个字节的下载量，并且会跟相关的 HTML，CSS，Javascript 等资源有所关联。即使这样，一个恰当摆放的图片可以帮助用户获取比1000个字还要多的信息，所以如何达到平衡完全取决于你。
 
-Next, you should consider if there is an alternative technology that could deliver the desired results, but in a more efficient manner:
+接下来，你应该考虑是否有另一种可替代的技术达到同样的效果，但是更有效：
 
-* **CSS effects** (gradients, shadows, etc.) and CSS animations can be used to produce resolution-independent assets that always look sharp at every resolution and zoom level, often at a fraction of the bytes required by an image file.
-* **Web fonts** enable use of beautiful typefaces while preserving the ability to select, search, and resize text - a significant improvement in usability.
+* **CSS 效果** (渐变、阴影、等。)与CSS动画效果都可以用来制造以像素值为参考的资源，这种资源会在每一种分辨率与放大情况下都可以达到高清晰度，并且体积只占图片文件的几分之一。
 
-If you ever find yourself encoding text in an image asset, stop and reconsider. Great typography is critical to good design, branding, and readability, but text-in-images delivers a poor user experience: the text is not selectable, not searchable, not zoomable, not accessible, and not friendly for high-DPI devices. The use of web fonts requires its [own set of optimizations](https://www.igvita.com/2014/01/31/optimizing-web-font-rendering-performance/), but it addresses all of these concerns and is always a better choice for displaying text.
+* **网页字体** 使用美观的字体的同时保证功能如选择，搜索，改变字体大小 - 一个重要的可读性提升。
 
+如果哪天你发现自己在用图片来代替文本，停下来好好想想。好的字体对于好的设计，品牌推广以及可读性至关重要，但是图片中的文字只会传递糟糕的用户体验：文字无法选定，无法搜索，无法放大，无法获取，并且不支持高清晰度的设备。网页字体的使用需要[自身的优化方案](https://www.igvita.com/2014/01/31/optimizing-web-font-rendering-performance/), 但是这总归覆盖了所有的需求，是一个更好的选择。
 
-## Vector vs. Raster images
+## 适量 vs. 栅格式图片
 
 {% include modules/takeaway.liquid list=page.key-takeaways.vector-raster %}
 
-Once you've determined that an image is, in fact, the optimal format to achieve the desired effect, the next critical choice is to select the appropriate format:
+一旦你确定了图片是最佳的方式来达到需求的效果，下一个需要考虑的问题就是选取合适的格式：
 
 &nbsp;
 
@@ -107,8 +108,8 @@ Once you've determined that an image is, in fact, the optimal format to achieve 
   </div>
 </div>
 
-* [Vector graphics](http://en.wikipedia.org/wiki/Vector_graphics) use lines, points, and polygons to represent an image.
-* [Raster graphics](http://en.wikipedia.org/wiki/Raster_graphics) represent an image by encoding the individual values of each pixel within a rectangular grid.
+* [适量图形](http://en.wikipedia.org/wiki/Vector_graphics) 使用线，点，与多边形组成的图像。
+* [栅格式图形](http://en.wikipedia.org/wiki/Raster_graphics) 通过对每个像素的方形编码阵组成的图像。
 
 Each format has its own set of pros and cons. Vector formats are ideally suited for images that consist of simple geometric shapes (e.g. logos, text, icons, and so on), and deliver sharp results at every resolution and zoom setting, which makes them an ideal format for high-resolution screens and assets that need to be displayed at varying sizes.
 
