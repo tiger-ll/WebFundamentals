@@ -1,7 +1,7 @@
 ---
 layout: article
-title: "App Bar"
-description: "Users have learnt to expect a header on all of the desktop sites, but on mobile you should be using the App Bar."
+title: "应用程序栏"
+description: "用户已经习惯于在网页版站点寻找页头，但在移动设备上，你应该使用应用程序栏来代替。"
 thumbnail: appbar/images/appbar.png
 article:
   written_on: 2014-01-01

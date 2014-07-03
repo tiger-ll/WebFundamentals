@@ -1,8 +1,8 @@
 ---
 layout: section
-title: "Navigation and Action Patterns"
-description: "Learn how to integrate navigation patterns into your site and get users to complete the actions you want them to."
-introduction: "In the previous design sections we've looked at the nuts and bolts which make up a responsive layout as well as some of the common techniques to have responsive content. This article will cover how we apply this to navigation."
+title: "导航和行为模式"
+description: "学习如何将导航模式运用到你的站点上用来督促用户完成你想要的动作。"
+introduction: "在前一篇章中，我们探讨了响应式布局的具体要素，以及使用响应式内容的常见技巧。在这一篇章，我们会讲到如何将之运用于导航中。"
 article:
   written_on: 2014-01-01
   updated_on: 2014-01-06

@@ -1,15 +1,8 @@
 ---
 layout: article
-title: "Avoid images completely"
-description: "Sometimes, the best image isn't actually an image at all. Whenever possible, use
-the native capabilities of the browser to provide the same or similar
-functionality."
-introduction: "Sometimes, the best image isn't actually an image at all. Whenever possible, use
-the native capabilities of the browser to provide the same or similar
-functionality.  Browsers generate visuals that would have previously required
-images.   This means that browsers no longer need to download separate image
-files and prevents awkwardly scaled images.  Icons can be rendered using unicode
-or special icon fonts."
+title: "完全避免图片"
+description: "有些时候，最佳的图形展示可能压根就不是一张图片。只要有可能，我们建议使用本地浏览器来实现相近的功能或效果。"
+introduction: "有些时候，最佳的图形展示可能压根就不是一张图片。只要有可能，我们建议使用本地浏览器来实现相近的功能或效果。浏览器可以预先加载图片然后进行图形渲染。这表示浏览器不再需要进行单独的图片资源下载并过滤变形的图片。我们可以使用字符编码或者字体图标表现图标"
 rel:
   gplusauthor: https://plus.google.com/+PeteLePage
 article:
@@ -73,22 +66,13 @@ related:
 
 {% include modules/takeaway.liquid list=page.key-takeaways.avoid-images %}
 
-## Place text in markup, instead of embedded in images
+## 在标识中放置文字，取代嵌入图片
 
-Wherever possible, text should be text, and not embedded into images, for
-example using images for headlines, or placing contact information like phone
-numbers or addresses directly into images.  This prevents people from being able
-to copy and paste the information, makes it inaccessible for screen readers, and
-isn't responsive.  Instead, place the text in your markup and if necessary use
-webfonts to achieve the style you need.
+网页的任何地方如果是文字，就使用文字而不是嵌入图片，例如在标题中使用图片，将电话号码或者地址之类的联系信息直接放在图片里。这些可以防止他人对这些信息进行复制粘贴加以利用，让信息不会被屏幕阅读器读取，不会响应式变化。作为替换，你可以在你的标记里使用文字，必要时使用网络字体实现你需要的风格。
 
-## Use CSS to replace images
+## 使用CSS替换图片
 
-Modern browsers can use CSS features to create styles that would previously
-required images.  For examples, complex gradients can be created using the
-<code>background</code> property, shadows can be created using
-<code>box-shadow</code> and rounded corners can be added with the
-<code>border-radius</code> property.
+现代浏览器使用CSS特性来创建样式，这将预先需要加载图片。举例来说，复杂的渐变可以运用<code>background</code>属性来生成，阴影可以运用 <code>box-shadow</code>生成，圆角可以运用<code>border-radius</code>属性加到元素上。
 
 <style>
   p#noImage {
@@ -125,40 +109,30 @@ ipsum lectus, hendrerit malesuada sapien eget, venenatis tempus purus.
 </style>
 {% endhighlight %}
 
-Keep in mind that using these techniques does require rendering cycles, which
-can be significant on mobile.  If over-used, you'll lose any benefit you may
-have gained and may hinder performance.
+记住使用这些技术并不需要呈现周期，一种对手机意义非凡的技术。如果用得过了，你会因此损失一些你已取得的效果并妨碍表现性能。
 
-## Replace simple icons with unicode
+## 使用字符编码替换简单的图标
 
-Many fonts include support for the myriad of unicode glyphs, which can be used
-instead of images.  Unlike images, unicode fonts scale well, and look good no
-matter matter how small or large they appear on screen.
+许多字体里包含并支持非常多的符号编码，这些可以用来替换图片。不像图片，字符编码能很好地进行缩放，并且不管展示屏多大或多小它们都看起来很不错。
 
-Beyond the normal character set, unicode may include symbols for number forms
-(&#8528;), arrows (&#8592;), math operators (&#8730;), geometric shapes
-(&#9733;), control pictures (&#9654;), braille patterns (&#10255;), music
-notation (&#9836;), Greek letters (&#937;), even chess pieces (&#9822;).
+除了普通字符集，字符码也包含了数字符号 (&#8528;)， 箭头 (&#8592;)， 数学运算符 (&#8730;)，几何图形
+(&#9733;),控制符号 (&#9654;)，盲文点字模型 (&#10255;)，音乐符号 (&#9836;)，希腊字母( (&#937;)，甚至国际象棋符号 (&#9822;)。
 
-Including a unicode character is done in the same way named entities are:
-`&#XXXX`, where `XXXX` represents the unicode character number.  For example:
+这种包含编码字符相同方法已经实现，实体命名为：`&#XXXX`，`XXXX` 表示字符编码号。举例说明：
 
 {% highlight html %}
-You're a super &#9733;
+你是一个超级巨&#9733;
 {% endhighlight %}
 
-You're a super &#9733;
+你是一个超级巨&#9733;
 
-## Replace complex icons with icon fonts
+## 使用图标字体代替复杂图标
 
-For more complex icon requirements, icon fonts are generally lightweight, easy
-to use and can be served in a single HTTP request. Icon fonts have a number of
-advantages to images:
+为了适应更多复杂的图标需要，图标字体普遍变得轻量级，在单一的HTTP请求中很易用。图标文字相较于图片来说有许多优势
 
-* They're vector graphics that can be infinitely scaled.
-* CSS effects such as color, shadowing, transparency and animations are
-  straightforward.
-* An entire set of icons can be downloaded in one font.
+* 它们是矢量图形可以被无限缩放。
+* CSS样式控制颜色、阴影、透明度以及简单动画。
+* 一整套的图标可以在一个字体里下载。
 
 {% link_sample _code/icon-font.html %}
 <img src="img/icon-fonts.png" class="center"
@@ -167,13 +141,11 @@ alt="Example of a page that uses FontAwesome for it's font icons.">
 {% endlink_sample %}
 {% include_code _code/icon-font.html iconfont html %}
 
-There are hundreds of free and paid icon fonts available including [Font
+有成百上千的免费和付费图标字体可用，包括[Font
 Awesome](http://fortawesome.github.io/Font-Awesome/),
 [Pictos](http://pictos.cc/) and [Glyphicons](http://glyphicons.com/).
 
-Be sure to balance the weight of the additional HTTP request and file size with
-the need for the icons.  For example, if you only need a handful of icons, it
-may be better to use an image or an image sprite.
+一定要保证平衡额外的HTTP请求和图标文件大小的权重。例如，如果你只是需要少量的图标，你最好使用一张图片或者一个图片的子画面。
 
 {% include modules/nextarticle.liquid %}
 

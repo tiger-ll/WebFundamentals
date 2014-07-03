@@ -1,13 +1,8 @@
 ---
 layout: article
-title: "Images in CSS"
-description: "The CSS `background` property is a powerful tool for adding complex images to
-elements, making it easy to add multiple images, cause them to repeat, and more."
-introduction: "The CSS `background` property is a powerful tool for adding complex images to
-elements, making it easy to add multiple images, cause them to repeat, and more.
- When combined with media queries, the background property becomes even more
-powerful, enabling conditional image loading based on screen resolution,
-viewport size and more."
+title: "CSS中的图片"
+description: "为元素使用复杂的图片时，CSS样式中的`background`属性十分强大，能让图片重复甚至更多。当该属性与media queries联合使用时，能基于屏幕分辨率、展示区大小或者其他为设备加载最合适的图片。"
+introduction: "为元素使用复杂的图片时，CSS样式中的`background`属性十分强大，能让图片重复甚至更多。当该属性与media queries联合使用时，能基于屏幕分辨率、展示区大小或者其他为设备加载最合适的图片。"
 rel:
   gplusauthor: https://plus.google.com/+PeteLePage
 article:
@@ -70,26 +65,17 @@ related:
 
 {% include modules/takeaway.liquid list=page.key-takeaways.use-right-image %}
 
-## Use media queries for conditional image loading or art direction
+## 使用media queries来加载条件响应的图片或者艺术指导。
 
-Media queries not only affect the page layout, but can also be used to
-conditionally load images or to provide art direction depending on the viewport
-width.
+Media queries（设备查询）不仅仅影响页面布局，也用来根据视窗宽度对应加载图片，或者提供艺术指导。
 
-For example in the sample below, on smaller screens, only `small.png` is
-downloaded and applied to the content `div`, while on larger screens,
-`background-image: url(body.png)` is applied to the body and `background-image:
-url(large.png)` is applied to the content `div`.
+用以下的示例进行说明， 在较小的屏幕上，只有`small.png`会被加载放入到`div`元素中, 在较大的屏幕上时, `background-image: url(body.png)`会被加载到body元素上并且`background-image: url(large.png)`被加载到内容div元素中。
 
 {% include_code _code/conditional-mq.html conditional css %}
 
-## Use image-set to provide high res images
+## 使用image-set提供高分辨率图片
 
-The `image-set()` function in CSS enhances the behavior `background` property,
-making it easy to provide multiple image files for different device
-characteristics.  This allows the browser to choose the best image depending on
-the characteristics of the device, for example using a 2x image on a 2x display,
-or a 1x image on a 2x device when on a limited bandwidth network.
+在CSS样式中使用`image-set()`提高`background`属性的表现能力, 让不同的设备特性选择不同的图片变得更加容易。这允许浏览器根据设备特性选择最佳图片，例如在2x的展示区使用2x的图片，或者在一个带宽受限的2x的设备上使用1x的图片。
 
 {% highlight css %}
 background-image: image-set(
@@ -98,26 +84,17 @@ background-image: image-set(
 );
 {% endhighlight %}
 
-In addition to loading the correct image, the browser will also scale it
-accordingly. In other words, the browser assumes that 2x images are twice as
-large as 1x images, and so will scale the 2x image down by a factor of 2, so
-that the image appears to be the same size on the page.
+加载合适的图片后，浏览器将图片进行相应的缩放。换句话说，浏览器假定2x的图片有两倍的1x的图片尺寸，并将2x的图片以2作为基数进行等比例缩小，这样图片就能在页面上等大呈现。
 
-Support for `image-set()` is still new and is only supported in Chrome and
-Safari with the `-webkit` vendor prefix.  Care must also be taken to include a
-fallback image for when `image-set()` is not supported, for example:
+浏览器对`image-set()`的支持仍处于发展中，现在只有以`-webkit`作为渲染内核的Chrome浏览器和Safari浏览器对该属性进行支持。 我们必须考虑当浏览器无法支持`image-set()`属性时我们应该有备用的图片，举例说明：
 
 {% include_code _code/image-set.html imageset css %}
 
-The above will load the appropriate asset in browsers that support image-set,
-and fall back to the 1x asset otherwise. The obvious caveat is that while
-`image-set()` browser support is low, most browsers will get the 1x asset.
+以上将合适的资源加载到支持image-set的浏览器，否则以1x的大小进行内容加载。重点提示当浏览器对`image-set()`的支持比较低时，大多数的浏览器都将会加载1x的资源。
 
-## Use media queries to provide high res images or art direction
+## 使用media queries提供高分辨率图片或者艺术指导
 
-Media queries can create rules based on the [device pixel
-ratio](http://www.html5rocks.com/en/mobile/high-dpi/#toc-bg), making it possible
-to specify different images for 2x vs 1x displays.
+多媒体查询将基于[设备像素比](http://www.html5rocks.com/en/mobile/high-dpi/#toc-bg)进行规则定义, 使将不同尺寸的图片进行1x或者2x展示变得更加容易。
 
 {% highlight css %}
 @media (min-resolution: 2dppx),
@@ -127,19 +104,11 @@ to specify different images for 2x vs 1x displays.
 }
 {% endhighlight %}
 
-Chrome, Firefox and Opera all support the standard `(min-resolution: 2dppx)`,
-while Safari and Android Browser both require the older vendor prefixed syntax
-without the `dppx` unit.  Remember, these styles are only loaded if the device
-matches the media query, and you must specify styles for the base case.  This
-also provides the benefit of ensuring something will be rendered if the browser
-doesn't support resolution specific media queries.
+Chrome, Firefox以及Opera都支持 `(min-resolution: 2dppx)`标准, 但Safari以及Android 浏览器需要提供不带`dppx`前缀的旧式语法的代理。请记住这些样式只有当设备符合多媒体查询条件时才会得以展示，你必须写好基本样式。这样也能够保证当浏览器不支持多媒体查询分辨率特性时，一些内容仍然可以被渲染展示。
 
 {% include_code _code/media-query-dppx.html mqdppx css %}
 
-You can also use the min-width syntax to display alternative images depending on
-the viewport size.  This technique has the advantage that the image is not
-downloaded if media query doesn't match.  For example, `bg.png` is only
-downloaded and applied to the `body` if the browser width is 500px or greater:
+你也可以根据展示区大小使用min-width来进行不同大小的图片。这项技术的好处在于，当多媒体查询不符合时图片不会被加载。举例来讲，只有在浏览器宽度在500像素以上时，图片文件`bg.png`才会被加载到`body`元素上。
 
 {% highlight css %}
 @media (min-width: 500px) {

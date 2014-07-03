@@ -1,8 +1,8 @@
 ---
 layout: article
-title: "Images"
-description: "A picture is worth 1000 words, and images play an integral part of every page. But they also often account for most of the downloaded bytes.  With Responsive web design not only can our layouts change based on device characteristics, but images as well."
-introduction: "A picture is worth 1000 words, and images play an integral part of every page. But they also often account for most of the downloaded bytes.  With responsive web design not only can our layouts change based on device characteristics, but images as well."
+title: "图片"
+description: "一幅图片胜过1000个单词，每个页面里图片都是一个主要部分。但它们也是需要加载的主要部分。响应式网络设计不仅能让我们的布局基于设备特性，也能够基于图片产生变化。"
+introduction: "一幅图片胜过1000个单词，每个页面里图片都是一个主要部分。但它们也是需要加载的主要部分。响应式网络设计不仅能让我们的布局基于设备特性，也能够基于图片产生变化。"
 rel:
   gplusauthor: https://plus.google.com/+PeteLePage
 article:
@@ -62,25 +62,16 @@ related:
   }
 </style>
 
-### Responsive images
+### 响应式图片
 
-Responsive web design means that not only can our layouts change based on device
-characteristics, but content as well.  For example, on high resolution (2x)
-displays, high resolution graphics are needed to ensure sharpness.  An image
-that  is 50% width may work just fine when the browser is 800px wide, but will
-use too much real estate on a narrow phone, and still comes at the same
-bandwidth overhead when scaled down to fit on a smaller screen.
+响应式的网络设计不仅仅意味着我们的布局能够基于设备特性产生变化，网页内容也要随之改变。举例来讲，在高分辨率（2x）显示下，高分辨率的图表需要保证清晰度。在浏览器宽度为800像素时，一张宽度设置为50%图片展示效果可能只是马马虎虎，但在宽度较窄的手机上它会占据太多空间，并在适应更小尺寸屏幕时依然会占据同样大的带宽。
 
-### Art direction
+### 艺术指导
 
 <img class="center" src="img/art-direction.png" alt="Art direction example"
 srcset="img/art-direction.png 1x, img/art-direction-2x.png 2x">
 
-Other times the image may need to be changed more drastically: changing the
-proportions, cropping and even replacing the entire image.  In this case,
-changing the image is usually referred to as art direction.  See
-[responsiveimages.org/demos/](http://responsiveimages.org/demos/) for more
-examples.
+在另一些情况下图片可能需要大幅度的变化：改变比例、裁剪甚至整张替换。在这些情况下，改变图片通常涉及到艺术指导。参阅[responsiveimages.org/demos/](http://responsiveimages.org/demos/) 查看更多示例。
 
 {% for guide in page.articles.images %}
 1. [{{guide.title}}]({{site.baseurl}}{{guide.url | clean}}) &mdash;
