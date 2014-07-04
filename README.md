@@ -3,14 +3,14 @@
 ## Page Distribution
 
 - [x] Getting Started 
-  - [x] Content Structure
-  - [x] Responsive Layout
+  - [x] Content Structure `example`
+  - [x] Responsive Layout `example`
 
 ---
 
-- [x] Multi-device Layouts
-    - [x] Responsive Web Design Fundamentals
-      - [x] Set the viewport
+- [x] Multi-device Layouts `example`
+    - [x] Responsive Web Design Fundamentals `example`
+      - [x] Set the viewport `example`
       - [x] Size content to the viewport
       - [x] Use CSS media queries for responsiveness
       - [x] How to choose breakpoints
