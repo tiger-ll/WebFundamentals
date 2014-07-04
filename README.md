@@ -2,9 +2,9 @@
 
 ## Page Distribution
 
-- title: "开始" `yazhou`
+- [x] title: "开始" 
   path: /getting-started/your-first-multi-screen-site/
-- title: "文档"
+- [x] title: "文档"
   path: /#documentation
   section:
     - title: "跨设备布局"
