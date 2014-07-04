@@ -5,8 +5,8 @@
 ## Page Distribution
 
 - [x] Getting Started 
-  - [x] Content Struckture
-  - [x] Responsive Layout
+  - [x] Content Struckture `me`
+  - [x] Responsive Layout `you`
 - [x] Layouts
     - [x] "Responsive Web Design Fundamentals"
       path: /layouts/rwd-fundamentals/
