@@ -3,24 +3,24 @@
 ## Page Distribution
 
 - [x] Getting Started 
-  - [x] Content Structure `???`
-  - [x] Responsive Layout `???`
+  - [x] Content Structure `example`
+  - [x] Responsive Layout `example`
 
 ---
 
 - [x] Multi-device Layouts `example`
     - [x] Responsive Web Design Fundamentals `example`
       - [x] Set the viewport `example`
-      - [x] Size content to the viewport
-      - [x] Use CSS media queries for responsiveness
-      - [x] How to choose breakpoints
-    - [ ] Responsive Web Deisgn Patterns
+      - [x] Size content to the viewport `example`
+      - [x] Use CSS media queries for responsiveness `example`
+      - [x] How to choose breakpoints `example`
+    - [ ] Responsive Web Deisgn Patterns `Pellegrino`
       - [ ] Mostly fluid
       - [ ] Column Drop
       - [ ] Layout shifter
       - [ ] Tiny tweaks
       - [ ] Off canvas
-    - [ ] Navigation and Action Patterns
+    - [ ] Navigation and Action Patterns `Pellegrino`
       - [ ] App bar
       - [ ] Tab bar
       - [ ] Navigation drawer
@@ -50,15 +50,15 @@
 ---
 
 - [x] Performance
-  - [~] Critical path rendering
-    - [ ] Constructing the Object Model
-    - [ ] Render-tree construction, Layout, and Paint 
-    - [ ] Render Blocking CSS
-    - [ ] Adding Interactivity with JavaScript
-    - [ ] Measuring the Critical Rendering Path with Navigation Timing
-    - [ ] Analyzing Critical Rendering Path Performance
-    - [ ] Optimizing the Critical Rendering Path
-    - [ ] PageSpeed Rules and Recommendations
+  - [ ] Critical path rendering `tofu`
+    - [ ] Constructing the Object Model `tofu`
+    - [ ] Render-tree construction, Layout, and Paint `tofu` 
+    - [ ] Render Blocking CSS `tofu`
+    - [ ] Adding Interactivity with JavaScript `tofu`
+    - [ ] Measuring the Critical Rendering Path with Navigation Timing `tofu`
+    - [ ] Analyzing Critical Rendering Path Performance `tofu`
+    - [ ] Optimizing the Critical Rendering Path `tofu`
+    - [ ] PageSpeed Rules and Recommendations `tofu`
   - [x] Optimizing-content-efficiency `bubu`
     - [x] Eliminating unnecessary downloads `bubu`
     - [x] Optimizing encoding and transfer size of text-based assets `bubu`
