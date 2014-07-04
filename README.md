@@ -3,8 +3,8 @@
 ## Page Distribution
 
 - [x] Getting Started 
-  - [x] Content Structure `example`
-  - [x] Responsive Layout `example`
+  - [x] Content Structure `???`
+  - [x] Responsive Layout `???`
 
 ---
 
@@ -32,7 +32,7 @@
   - [ ] Create Amazing Forms
     - [ ] Label and name inputs properly
     - [ ] Provide real-time validation
-    - [ ] Choose the best input type
+    - [ ] Choose the best input type `Portrayals`
     - [ ] Simplify checkout with requestAutocomplete API
     - [ ] Grouping form fields
   - [ ] Add Touch to Your Site
@@ -42,15 +42,15 @@
 
 ---
 
-- [ ] Media
-  - [ ] Images
+- [x] Introduction to Media `tofu`
+  - [x] Images `tofu`
   - [ ] Video
   - [ ] Audio
 
 ---
 
-- [ ] Performance
-  - [ ] Critical path rendering
+- [x] Performance
+  - [~] Critical path rendering
     - [ ] Constructing the Object Model
     - [ ] Render-tree construction, Layout, and Paint 
     - [ ] Render Blocking CSS
@@ -59,14 +59,14 @@
     - [ ] Analyzing Critical Rendering Path Performance
     - [ ] Optimizing the Critical Rendering Path
     - [ ] PageSpeed Rules and Recommendations
-  - [ ] Optimizing-content-efficiency
-    - [ ] Eliminating unnecessary downloads
-    - [ ] Optimizing encoding and transfer size of text-based assets
-    - [ ] HTTP caching
+  - [x] Optimizing-content-efficiency `bubu`
+    - [x] Eliminating unnecessary downloads `bubu`
+    - [x] Optimizing encoding and transfer size of text-based assets `bubu`
+    - [x] HTTP caching `bubu`
 
 ---
 
-- [ ] Resources
+- [x] Resources `bubu`
   - [ ] Glossary
   - [ ] Samples
   - [ ] Style guide
