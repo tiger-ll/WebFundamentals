@@ -1,12 +1,13 @@
-toc:
-- title: "网络<strong>开发基础</strong>"
-  path: /
-  home: true
+# Web Fundamentals - Simplified Chinese
+
+================
+
+## Page Distribution
+
 - title: "开始"
   path: /getting-started/your-first-multi-screen-site/
 - title: "文档"
   path: /#documentation
-  hasSubNav: true
   section:
     - title: "跨设备布局"
       path: /layouts/
@@ -22,7 +23,6 @@ toc:
           path: /layouts/ui-elements/
     - title: "表格与用户输入"
       path: /input/
-      id: user-input
       section:
       - title: "触摸式输入"
         path: /input/touch-input/
@@ -30,7 +30,6 @@ toc:
         path: /input/form-input/
     - title: "图片，视频以及音频"
       path: /media/
-      id: introduction-to-media
       section:
       - title: "图片"
         path: /media/images/
@@ -40,7 +39,6 @@ toc:
         path: /media/audio/
     - title: "性能"
       path: /performance/
-      id: performance
       section:
         - title: "关键渲染路径"
           path: /performance/critical-path-rendering/
