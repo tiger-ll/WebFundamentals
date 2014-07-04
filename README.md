@@ -1,10 +1,8 @@
 # Web Fundamentals - Simplified Chinese
 
-================
-
 ## Page Distribution
 
-- title: "开始"
+- title: "开始" `yazhou`
   path: /getting-started/your-first-multi-screen-site/
 - title: "文档"
   path: /#documentation
