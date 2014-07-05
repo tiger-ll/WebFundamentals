@@ -30,7 +30,7 @@
 
 - [x] Form and user input
   - [ ] Create Amazing Forms
-    - [ ] Label and name inputs properly
+    - [ ] Label and name inputs properly `bitch`
     - [ ] Provide real-time validation
     - [ ] Choose the best input type `Portrayals`
     - [ ] Simplify checkout with requestAutocomplete API
@@ -50,15 +50,15 @@
 ---
 
 - [x] Performance
-  - [ ] Critical path rendering `tofu`
-    - [ ] Constructing the Object Model `tofu`
-    - [ ] Render-tree construction, Layout, and Paint `tofu` 
-    - [ ] Render Blocking CSS `tofu`
-    - [ ] Adding Interactivity with JavaScript `tofu`
-    - [ ] Measuring the Critical Rendering Path with Navigation Timing `tofu`
-    - [ ] Analyzing Critical Rendering Path Performance `tofu`
-    - [ ] Optimizing the Critical Rendering Path `tofu`
-    - [ ] PageSpeed Rules and Recommendations `tofu`
+  - [x] Critical path rendering `tofu`
+    - [x] Constructing the Object Model `tofu`
+    - [x] Render-tree construction, Layout, and Paint `tofu` 
+    - [x] Render Blocking CSS `tofu`
+    - [x] Adding Interactivity with JavaScript `tofu`
+    - [x] Measuring the Critical Rendering Path with Navigation Timing `tofu`
+    - [x] Analyzing Critical Rendering Path Performance `tofu`
+    - [x] Optimizing the Critical Rendering Path `tofu`
+    - [x] PageSpeed Rules and Recommendations `tofu`
   - [x] Optimizing-content-efficiency `bubu`
     - [x] Eliminating unnecessary downloads `bubu`
     - [x] Optimizing encoding and transfer size of text-based assets `bubu`
