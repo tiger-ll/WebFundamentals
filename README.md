@@ -30,7 +30,7 @@
 
 - [x] Form and user input
   - [ ] Create Amazing Forms
-    - [ ] Label and name inputs properly
+    - [ ] Label and name inputs properly `bitch`
     - [ ] Provide real-time validation
     - [ ] Choose the best input type `Portrayals`
     - [ ] Simplify checkout with requestAutocomplete API
