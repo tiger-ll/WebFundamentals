@@ -21,10 +21,10 @@
       - [ ] Tiny tweaks
       - [ ] Off canvas
     - [x] Navigation and Action Patterns `Pellegrino`
-      - [x] App bar
-      - [x] Tab bar
-      - [x] Navigation drawer
-      - [x] Bottom bar
+      - [x] App bar `bubu`
+      - [x] Tab bar `bubu`
+      - [x] Navigation drawer `bubu`
+      - [x] Bottom bar `bubu`
 
 ---
 
@@ -44,7 +44,7 @@
 
 - [x] Introduction to Media `tofu`
   - [x] Images `tofu`
-  - [ ] Video
+  - [x] Video `bubu`
     - [ ] Add a video `bubu`
     - [ ] Provide alternatives for legacy platforms `bubu`
     - [ ] Customize the video player `bubu`
