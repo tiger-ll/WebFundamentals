@@ -45,12 +45,12 @@
 - [x] Introduction to Media `tofu`
   - [x] Images `tofu`
   - [ ] Video
-    - [ ] Add a video 
-    - [ ] Provide alternatives for legacy platforms
-    - [ ] Customize the video player
-    - [ ] Size videos correctly
-    - [ ] Accessbility matters
-    - [ ] Quick Reference
+    - [ ] Add a video `bubu`
+    - [ ] Provide alternatives for legacy platforms `bubu`
+    - [ ] Customize the video player `bubu`
+    - [ ] Size videos correctly `bubu`
+    - [ ] Accessbility matters `bubu`
+    - [ ] Quick Reference `bubu`
   - [ ] Audio
 
 ---
