@@ -2,13 +2,13 @@
 
 ## Page Distribution
 
-- [x] Getting Started 
-  - [x] Content Structure `example`
-  - [x] Responsive Layout `example`
+- [x] Getting Started @lostlandark
+  - [x] Content Structure @lostlandark
+  - [x] Responsive Layout @lostlandark
 
 ---
 
-- [x] Multi-device Layouts `example`
+- [x] Multi-device Layouts @lostlandark
     - [x] Responsive Web Design Fundamentals `example`
       - [x] Set the viewport `example`
       - [x] Size content to the viewport `example`
@@ -42,7 +42,7 @@
 
 ---
 
-- [x] Introduction to Media `tofu`
+- [x] Introduction to Media `@tofu`
   - [x] Images `tofu`
   - [x] Video `bubu`
     - [ ] Add a video `bubu`
