@@ -45,6 +45,12 @@
 - [x] Introduction to Media `tofu`
   - [x] Images `tofu`
   - [ ] Video
+    - [ ] Add a video 
+    - [ ] Provide alternatives for legacy platforms
+    - [ ] Customize the video player
+    - [ ] Size videos correctly
+    - [ ] Accessbility matters
+    - [ ] Quick Reference
   - [ ] Audio
 
 ---
