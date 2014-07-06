@@ -21,10 +21,10 @@
       - [ ] Tiny tweaks
       - [ ] Off canvas
     - [x] Navigation and Action Patterns **Pellegrino**
-      - [x] App bar **somanybububububu**
-      - [x] Tab bar **somanybububububu**
-      - [x] Navigation drawer **somanybububububu**
-      - [x] Bottom bar **somanybububububu**
+      - [x] App bar **somanybubububu**
+      - [x] Tab bar **somanybubububu**
+      - [x] Navigation drawer **somanybubububu**
+      - [x] Bottom bar **somanybubububu**
 
 ---
 
@@ -44,13 +44,13 @@
 
 - [x] Introduction to Media **@tofu**
   - [x] Images **tofu**
-  - [x] Video **somanybububububu**
-    - [ ] Add a video **somanybububububu**
-    - [ ] Provide alternatives for legacy platforms **somanybububububu**
-    - [ ] Customize the video player **somanybububububu**
-    - [ ] Size videos correctly **somanybububububu**
-    - [ ] Accessbility matters **somanybububububu**
-    - [ ] Quick Reference **somanybububububu**
+  - [x] Video **somanybubububu**
+    - [ ] Add a video **somanybubububu**
+    - [ ] Provide alternatives for legacy platforms **somanybubububu**
+    - [ ] Customize the video player **somanybubububu**
+    - [ ] Size videos correctly **somanybubububu**
+    - [ ] Accessbility matters **somanybubububu**
+    - [ ] Quick Reference **somanybubububu**
   - [ ] Audio
 
 ---
@@ -65,14 +65,14 @@
     - [x] Analyzing Critical Rendering Path Performance **tofu**
     - [x] Optimizing the Critical Rendering Path **tofu**
     - [x] PageSpeed Rules and Recommendations **tofu**
-  - [x] Optimizing-content-efficiency **somanybububububu**
-    - [x] Eliminating unnecessary downloads **somanybububububu**
-    - [x] Optimizing encoding and transfer size of text-based assets **somanybububububu**
-    - [x] HTTP caching **somanybububububu**
+  - [x] Optimizing-content-efficiency **somanybubububu**
+    - [x] Eliminating unnecessary downloads **somanybubububu**
+    - [x] Optimizing encoding and transfer size of text-based assets **somanybubububu**
+    - [x] HTTP caching **somanybubububu**
 
 ---
 
-- [x] Resources **somanybububububu**
+- [x] Resources **somanybubububu**
   - [ ] Glossary
   - [ ] Samples
   - [ ] Style guide
