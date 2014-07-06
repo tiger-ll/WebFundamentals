@@ -1,7 +1,7 @@
 ---
 layout: article
-title: "Bottom Bar"
-description: "If you are developing a web app and find that the number of actions a user can perform is more than the App Bar can handle, the best option is to overflow into a Bottom Bar."
+title: "底边栏"
+description: "如果你正在开发一个web应用，而且App Bar承载不下用户可以执行的操作总数，最好的选择就是溢出它们都塞到底边栏里。"
 thumbnail: bottombar/images/bottombar.png
 article:
   written_on: 2014-01-01
@@ -9,37 +9,38 @@ article:
   order: 4
 rel:
   gplusauthor: https://plus.google.com/+MattGaunt
+  twitterauthor: "@gauntface"
 collection: navigation-patterns
-introduction: "If you are developing a web app and find that the number of actions a user can perform is more than the App Bar can handle, the best option is to overflow into a Bottom Bar."
+introduction: "如果你正在开发一个web应用，而且App Bar承载不下用户可以执行的操作行为总数，最好的选择就是溢出它们都塞到底边栏里。"
 key-takeaways:
   bottom-bar:
-    - Only consider using this approach if you aren't using a Tab Bar.
-    - Stick to 5 items at most.
-    - Use when you need to add more actions than the App Bar can hold.
+    - 只在你没有使用选项卡的时候考虑使用这种方式。
+    - 最多插入5项。
+    - 只有当你需要添加App bar承载不下的操作时使用。
 ---
 
 {% wrap content%}
 
 <a href="{{site.baseurl}}/resources/samples/layouts/navigation-patterns/bottombar-sample1.html">
-	<img class="g-medium--full g-wide--full" src="images/bottombar.png">
+  <img class="g-medium--full g-wide--full" src="images/bottombar.png">
 </a>
 
 <div style="clear: both;"></div>
 
-We've seen that the App Bar can be used for placing actions.
+我们已经知道了App Bar可用于放置操作行为。
 
-For many sites, especially content driven sites, this will be enough space since there are relatively few actions available. However, web apps may find they have more actions for sections of their UI.
+对于很多站点，尤其是以内容为导向的站点来说，其空间对于相对较少的操作来说已经足够了。然而web应用会发现他们用户界面有更多的可操作部分。
 
-If you aren't using a tab and you have too many actions to fit on the App Bar, place actions in a bar along the bottom.
+如果你没有使用选项卡，并且你需要在App bar中放入太多操作，就把这些操作放在底部的栏内。
 
 {% include modules/takeaway.liquid list=page.key-takeaways.bottom-bar %}
 
-The advantage of this is that you have more space for actions and it's in a touch friendly area and gives you a secondary tier of actions.
+这么做的好处是你有更多的空间来放置操作，它们是在一个触摸友好区域，而且可以给你提供一个辅助操作区。
 
-Limit yourself to five actions at most, avoiding the buttons becoming to small and difficult to tap.
+限制你自己最多放5个操作进去，别让那些按钮变得太小而难以触碰。
 
 <a href="{{site.baseurl}}/resources/samples/layouts/navigation-patterns/appbar-navdrawer-bottombar-sample.html">
-	<img class="g--half g--last" src="images/bottom-bar-alt-1.png"> 
+  <img class="g--half g--last" src="images/bottom-bar-alt-1.png"> 
 </a>
 
 <div style="clear: both;"></div>
