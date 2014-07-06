@@ -20,11 +20,11 @@
       - [ ] Layout shifter
       - [ ] Tiny tweaks
       - [ ] Off canvas
-    - [ ] Navigation and Action Patterns `Pellegrino`
-      - [ ] App bar
-      - [ ] Tab bar
-      - [ ] Navigation drawer
-      - [ ] Bottom bar
+    - [x] Navigation and Action Patterns `Pellegrino`
+      - [x] App bar
+      - [x] Tab bar
+      - [x] Navigation drawer
+      - [x] Bottom bar
 
 ---
 
