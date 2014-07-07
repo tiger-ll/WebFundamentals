@@ -10,61 +10,62 @@ article:
 rel:
   gplusauthor: https://plus.google.com/+MattGaunt
 collection: navigation-patterns
-introduction: "Users have learnt to expect a header on all of the desktop sites, but on mobile you should be using the App Bar."
+introduction: "用户已经习惯于在网页版站点寻找页头，但在移动设备上，你应该使用应用程序栏来代替。"
 key-takeaways:
   app-bar:
-    - Your logo should be placed at the top of each screen and take the user back to your homepage.
-    - If you have a menu button, place it on the far left or far right of the App Bar and keep it in the same place throughout your site.
-    - Key actions for your page should be kept in the App Bar.
+    - 你的标志应该展示在每一屏的顶端，并且可以使用户回到你的首页。
+    - 如果你有一个菜单按钮，把它放在App Bar的最左边或者最右边，并且保证在全站中，它一直在相同的位置。
+    - 你页面中的关键行为应一直在App Bar上。
 ---
 
 {% wrap content%}
 
 <a href="{{site.baseurl}}/resources/samples/layouts/navigation-patterns/appbar-navdrawer-sample1.html">
-	<img class="g-medium--full g-wide--full" src="images/appbar.png">
+  <img class="g-medium--full g-wide--full" src="images/appbar.png">
 </a>
+
 <div style="clear: both;"></div>
 
-One expectation users will make when they land on your site is that your site's logo will be at the top of every page and clicking it will take them to your home page.
+用户会理所当然地觉得，当他登录你的网站的时候，你的网站标志会永远在页面顶端，而点击它就能跳转到你的首页上。
 
-Traditionally the web has used page headers for this. On mobile devices use the App Bar.
+一般而言网站会有页面头部来完成这个工作。在移动设备上则使用App Bar。
 
 {% include modules/takeaway.liquid list=page.key-takeaways.app-bar %}
 
-The App Bar consists of three elements.
+App Bar包含三个元素。
 
-- Your sites logo
-- Primary actions
-- (Optional) Menu button
+- 你的网站标志
+- 基本操作
+- （可选）菜单按钮
 
-Nearly every site on the internet will have actions they enable their users to perform, search for example. Place buttons to perform these actions in the App Bar, giving your user a common to find out what the current actions are available on that page.
+几乎网上的每个网站都会有让他们的用户来执行的行为，比如说搜索。在App Bar上放置按钮来执行这些行为，让你的用户下意识地去找到当前页面可行的行为都有哪些。
 
-If you have a menu, use the hamburger icon (three horizontal lines) and place it on the far left or far right. Once you have selected a side, don't move it, always keep it in the same position meaning the user only needs to learn where it is once.
+如果你有一个菜单，使用汉堡包图标（三条横线），然后把它放在最左边或者最右边。如果你选好了一边，就不要移动它了，保证它一直处在同一个位置，这样用户只需记住一次它在哪。
 
-## Left vs Right Menu Button
+## 左边 vs 右边的菜单按钮
 
-If you have a slide in menu, you have the choice of putting the menu on the left or right hand side.
+如果你的菜单有滑动，你就要选择把菜单放在左边还是右边。
 
-The top left corner is perceived by the user as where the most important elements of your UI lives, however it can also one of  hardest places to reach when holding the phone one handed. Putting the menu on the top right still gives it prominence and importance, but is easier to tap while holding the phone single handidly.
+用户通常会认为左上角是最重要的UI元素，然而那里也是单手持握手机时最难碰到的地方。放在右上角也会使它显得突出和重要，同时单手持我手机时也比较容易点到。
 
 <a href="{{site.baseurl}}/resources/samples/layouts/navigation-patterns/appbar-navdrawer-sample1.html">
-	<img class="g--half" src="images/appbar-menu-left.png">
+  <img class="g--half" src="images/appbar-menu-left.png">
 </a>
 <a href="{{site.baseurl}}/resources/samples/layouts/navigation-patterns/appbar-navdrawer-sample2.html">
-	<img class="g--half g--last" src="images/appbar-menu-right.png">
+  <img class="g--half g--last" src="images/appbar-menu-right.png">
 </a>
 
 <div style="clear: both;"></div>
 
-## Guidelines
+## 指导
 
-The App Bar is a set of principals that you should apply to give your users a predictable experience, but there is plenty of opportunity to be creative in terms of style of the bar, button and interactions.
+App Bar是一系列基本原则，你应该使用它来为你的用户提供可预见的经验，不过仍有很多机会在其样式、按钮和交互方式上创新。
 
 <a href="{{site.baseurl}}/resources/samples/layouts/navigation-patterns/appbar-navdrawer-bottombar-sample.html">
-	<img class="g--half" src="images/appbar-alt-1.png">
+  <img class="g--half" src="images/appbar-alt-1.png">
 </a>
 <a href="{{site.baseurl}}/resources/samples/layouts/navigation-patterns/appbar-navdrawer-sample.html">
-	<img class="g--half g--last" src="images/appbar-alt-2.png">
+  <img class="g--half g--last" src="images/appbar-alt-2.png">
 </a>
 
 <div style="clear: both;"></div>

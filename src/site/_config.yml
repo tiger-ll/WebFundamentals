@@ -14,6 +14,7 @@ github:
   content: tree/master/src/site
 include_open_html: true
 custom:
+encoding: UTF-8
 kramdown:
   toc_levels: "2"
 include: ['.htaccess']
