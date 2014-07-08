@@ -1,13 +1,8 @@
 ---
 layout: article
-title: "Label and name inputs properly"
-description: "Forms are hard to fill out on mobile. The best forms are the ones with the
-fewest inputs."
-introduction: "Forms are hard to fill out on mobile. The best forms are the ones with the
-fewest inputs. Good forms provide semantic input types. Keys should change to
-match the user's input type; users pick a date in a calendar. Keep your user
-informed. Validation tools should tell the user what they need to do before
-submitting the form."
+title: "合适的标签和名称输入"
+description: "表单很难在移动设备上完全表现出来。体验最佳的表单是那些仅需少量输入的表单。"
+introduction: "表单很难在移动设备上完全表现出来。体验最佳的表单是那些仅需少量输入的表单。好的表单能够提供给用户恰逢时宜的输入类型。键盘应该改变类型以匹配用户的输入场景。当用户在日历中添加一个事件时，请使你的用户时刻保持被提醒的状态。认证工具则应该告诉用户在提交表格前需要做些什么。"
 article:
   written_on: 2014-04-30
   updated_on: 2014-04-30
@@ -17,16 +12,13 @@ rel:
 collection: form-input
 key-takeaways:
   label-and-name:
-    - Always use <code>label</code>s on form inputs, and ensure they're visible when
-      the field is in focus.
-    - Use <code>placeholder</code>s to provide guidance about what you expect.
-    - To help the browser auto-complete the form, use established <code>name</code>'s
-      for elements and include the <code>autocomplete</code> attribute.
+    - 请在表单输入中使用<code>label</code>s ，同时保证他们在输入框在激活时是可见的。
+    - 请使用 <code>placeholder</code>s 为用户提供你所期待的向导
+    - 请帮助浏览器自动完成表单，使用已建立的<code>name</code>'s
+      作为元素和包括<code>autocomplete</code> 属性。
 remember:
   use-placeholders:
-    - Placeholders disappear as soon as focus is placed in an element, thus
-      they are not a replacement for labels.  They should be used as an aid
-      to help guide users on the required format and content.
+    - 当焦点被一个元素占用时，占位符会自动隐藏。因此，占位符不能替代标签。他们应该被用来作为所需格式和所需内容上的一种援助，以帮助并为用户提供导航。
   recommend-input:
     - Auto-complete only works when the form method is post.
   use-datalist:
@@ -66,30 +58,18 @@ remember:
 
 {% include modules/takeaway.liquid list=page.key-takeaways.label-and-name %}
 
-### The importance of labels
+### 标签的重要性
 
-The `label` element provides direction to the user, telling them what
-information is needed in a form element.  Each `label` is associated with an
-input element by placing it inside the `label` element, or by using the "`for`"
-attribute.  Applying labels to form elements also helps to improve the touch
-target size: the user can touch either the label or the input in order to place
-focus on the input element.
-
+`label` 元素为用户提供操作方向，告诉他们在一个表单元素中什么是他们所需要的信息。通过放置输入元素在`label`元素中，或者使用"`for`"属性，每一个`label`和就会和每一个输入元素相互关联。通过给表单元素添加标注同样也可以帮助扩大触摸目标的面积：即如果用户把焦点集中在输入元素上时，可以触摸标注或者是输入框的方式来实现。 
 {% include_code _code/order.html labels %}
 
-### Label sizing and placement
+### label尺寸与位置
 
-Labels and inputs should be large enough to be easy to press.  In portrait
-viewports, field labels should be above input elements, and beside them in
-landscape.  Ensure field labels and the corresponding input boxes are visible at
-the same time.  Be careful with custom scroll handlers that may scroll input
-elements to the top of the page hiding the label, or labels placed below input
-elements may be covered by the virtual keyboard.
+labels与输入元素应该有足够的尺寸以便容易点击。在描述视窗内，标签字符应当位于输入元素的上方。在全局视窗内，标签字符应当位于输入元素的两旁。请确保标签字符与其相应的输入框同时可见。请注意自定义滚动处理程序，它可能将输入元素移动至页面顶部而隐藏标签。或者是位于输入元素下方的labels会被虚拟键盘而遮盖。
 
-### Use placeholders
+### 使用占位符
 
-The placeholder attribute provides a hint to the user about what's expected in
-the input by displaying its value as light text until the element gets focus.
+占位符属性为用户提供输入内容提示，它通过高亮文本显示直到元素得到点击为止。
 
 <input type="text" placeholder="MM-YYYY">
 
@@ -100,22 +80,15 @@ the input by displaying its value as light text until the element gets focus.
 
 {% include modules/remember.liquid title="Remember" list=page.remember.use-placeholders %}
 
-### Use metadata to enable auto-complete
+### 使用元数据使自动完成成为可能
 
-Users appreciate when websites save them time by automatically filling common
-fields like names, email addresses and other frequently used fields, plus it
-helps to reduce potential input errors -- especially on virtual keyboards and
-small devices.
+当网站为用户节省时间，自动填入通用字符，例如：名字、邮件地址和其他常用的表字符时，用户会感到非常满足。添加元数据能够帮助减少潜在的输入错误 - 特别是在虚拟键盘和小型设备上。
 
-Browsers use many heuristics to determine which fields they can
-[auto-populate](https://support.google.com/chrome/answer/142893) [based on
+浏览器会使用heuristics来决定哪个字符他们可以自动完成[auto-populate](https://support.google.com/chrome/answer/142893)[based on
 previously specified data by the
-user](https://support.google.com/chrome/answer/142893), and you can give hints
-to the browser by providing both the name attribute and the autocomplete
-attribute on each input element.
+user](https://support.google.com/chrome/answer/142893)，并且，通过在输入元素中提供名字属性和自动完成属性，你可以给予浏览器提示。 
 
-For example, to hint to the browser that it should auto-complete the form with
-the users name, email address and phone number, you should use:
+举例来说，为了提示浏览器它应该自动完成表单，包括用户姓名，邮件地址和手机号码，你应该使用:
 
 {% include_code _code/order.html autocomplete %}
 
@@ -208,18 +181,14 @@ The `autocomplete` attributes should be prefixed with either `shipping` or `bill
 
 {% include modules/remember.liquid title="Remember" list=page.remember.recommend-input %}
 
-### The `autofocus` attribute
+### `autofocus`自动聚焦属性
 
-On some forms, for example the Google home page where the only thing you want
-the user to do is fill out a particular field, you can add the `autofocus`
-attribute.  When set, desktop browsers immediately move the focus to the input
-field, making it easy for users to quickly begin using the form.  Mobile
-browsers ignore the `autofocus` attribute, to prevent the keyboard from randomly
-appearing.
+在一些表单中，例如在Google主页，你唯一想让用户做的事情是填写特定的字符，因此你可以添加`autofocus`属性。当添加自动聚焦属性后，桌面浏览器会立即将聚焦于输入表单，目的是为了让用户更容易开始使用这个表单。移动浏览器则忽略了`autofocus`属性，这是为了防止键盘随机不定的出现的情况 to prevent the keyboard from randomly
+appearing。
 
-Be careful using the autofocus attribute because it will steal keyboard focus
+在使用自动聚焦属性时请注意，因为它可能取得键盘焦点，并潜在地禁用了用作导航的退格符
 and potentially preventing the backspace character from being used for
-navigation.
+navigation。
 
 {% highlight html %}
 <input type="text" autofocus ...>
