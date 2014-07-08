@@ -29,15 +29,15 @@
 ---
 
 - [x] Form and user input
-  - [ ] Create Amazing Forms
-    - [ ] Label and name inputs properly **bitch**
-    - [ ] Provide real-time validation
-    - [ ] Choose the best input type **Portrayals**
-    - [ ] Simplify checkout with requestAutocomplete API
-    - [ ] Grouping form fields
-  - [ ] Add Touch to Your Site
-    - [ ] Stateful Elements Respond to Touch
-    - [ ] Implement Custom Gestures
+  - [x] Create Amazing Forms **tiger**
+    - [x] Label and name inputs properly **mu**
+    - [x] Provide real-time validation **tiger**
+    - [x] Choose the best input type **Portrayals**
+    - [x] Simplify checkout with requestAutocomplete API **tiger**
+    - [x] Grouping form fields **tiger**
+  - [ ] Add Touch to Your Site  **tiger**
+    - [ ] Stateful Elements Respond to Touch  **tiger**
+    - [ ] Implement Custom Gestures  **tiger**
 
 
 ---
