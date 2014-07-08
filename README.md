@@ -39,7 +39,6 @@
     - [ ] Stateful Elements Respond to Touch  **@tiger**
     - [ ] Implement Custom Gestures  **@portrayals**
 
-
 ---
 
 - [x] Introduction to Media **@tofu**
