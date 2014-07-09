@@ -44,13 +44,13 @@
 - [x] Introduction to Media **@tofu**
   - [x] Images **@tofu**
   - [x] Video **@somanybubububu**
-    - [ ] Add a video **@somanybubububu**
-    - [ ] Provide alternatives for legacy platforms **@somanybubububu**
-    - [ ] Customize the video player **@somanybubububu**
-    - [ ] Size videos correctly **@somanybubububu**
-    - [ ] Accessbility matters **@somanybubububu**
-    - [ ] Quick Reference **@somanybubububu**
-  - [ ] ~~Audio~~
+    - [x] Add a video **@somanybubububu**
+    - [x] Provide alternatives for legacy platforms **@somanybubububu**
+    - [x] Customize the video player **@somanybubububu**
+    - [x] Size videos correctly **@somanybubububu**
+    - [x] Accessbility matters **@somanybubububu**
+    - [x] Quick Reference **@somanybubububu**
+  - [ ] ~~Audio~~ (content under development)
 
 ---
 
