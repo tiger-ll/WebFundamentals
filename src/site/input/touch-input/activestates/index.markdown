@@ -1,11 +1,9 @@
 ---
 layout: article
-title: "Stateful Elements Respond to Touch"
-description: "The simplest way to reassure a user that their touch isn't ignored is to change your UI as they press down. Changing a background color can make all the difference and is simple to do."
-introduction: "Touchscreens are available on more and more devices, ranging
-  from phones up to desktop screens. When your users choose to interact with
-  your UI, your app should respond to their touch in intuitive and beautiful
-  ways."
+title: "回应触控的状态性元素"
+description: "
+要确保用户能感受到自己的触控没被忽视，最简单的方式就是在他们进行点击时改变的你网站的UI用户界面。改变背景颜色就能够让一切变得不同，并且这也很容易做到。"
+introduction: "触控屏幕在越来越多的设备上出现，从手机到桌面屏幕。当你的用户选择与你设计的用户界面相交互，你的应用程序需要以一种直观并且美观的方式回应他们的触摸。"
 article:
   written_on: 2014-01-01
   updated_on: 2014-01-06
@@ -14,40 +12,33 @@ rel:
   gplusauthor: https://plus.google.com/+MattGaunt
 key-takeaways:
   add-states:
-    - Make your site feel snappy and responsive&colon; change the UI for each state :hover, :active and :focus.
-    - Don’t override a browser’s default responses to touch and focus unless you are
-      implementing your own UI changes.
-    - Disable text selection on elements user’s will touch, unless there’s
-      a good reason why users might need to copy / select the text.
+    - 若要使你的网站让人感觉轻快和反应迅速，那么就为下面这些状态改变用户界面吧： :hover, :active 和 :focus。
+    - 除非你要套用自己改造的用户界面，否则请不要改变一个浏览器对触摸和聚焦的默认反应。
+    - 在那些用户会去触控的元素上，文本信息应禁用被选取的功能，除非你有合理的原因可能需要用户选取或者拷贝这些文字信息。    
 remember:
   disable-user-select:
-    - You should be cautious not to disable user selection if the
-      information on the element may be useful to the user (phone number,
-      e-mail address, and so on).
+    - 如果元素上的信息对用户来说有帮助（电话号码，邮件，地址等等），那么你应该注意不能无效化用户选择。
   override-default:
-    - Only override browser styles if you are implementing your own!
+    - 如果你要执行自己的浏览方式，你只有选择覆盖原来的浏览方式！
 collection: touch-input
 ---
 
 {% wrap content%}
 
-## Add Touch States
+## 添加触控状态
 
-Have you ever touched or clicked an element on a web page and questioned
-whether the site actually detected it?
+你曾经有过触摸或点击一个网页的元素，却不确定网站是否真正侦测到了你的触摸或者点击的经历吗？
 
-Simply altering the color of elements as users touch parts of your UI gives a basic reassurance that your site is working. Not only does this alleviate frustation, but can also give a snappy and responsive feel to your site.
+当用户触摸你用户界面的一部分的时候，简单地替换一下元素颜色，这会给予用户一种网页正常运行的确示。这样不仅会缓解用户失望的情绪，并且能够为你的网站赋予一种轻快和热情的感觉。
 
-### Use Pseudo Classes to Change UI for each Touch State
+### 为每次的点击状态使用伪类来改变用户界面
 
-The fastest way to support touch is to change the UI in response to a DOM
-element’s change in state.
+支持触摸的最快的方式是改变用户界面以应对状态下一个DOM元素的变化。
 
 {% include modules/takeaway.liquid list=page.key-takeaways.add-states %}
 
-DOM elements can be in one of the following states, default, focus, hover, and active. To change
-our UI for each of these states, we need to apply styles to the following
-pseudo classes `:hover`, `:focus` and `:active` as shown below:
+DOM元素可能存在于以下状态中 default, focus, hover, 和 active.要为每一个状态改变用户界面，我们需要添加样式到以下伪类： `:hover`，` :focus`和`:active`，即如下所示：
+
 
 {% include_code ../_code/states-example.html btnstates css %}
 
@@ -55,24 +46,21 @@ See [Pseudo classes for touch states](#pseudo-classes-for-touch-states):
 
 ![Image illustrating the different colors for button states](images/button-states.png)
 
-### Hover and Focus Stickiness
+### 悬停和聚焦
 
-On most mobile browsers *hover* and/or *focus* states will apply 
-to an element after it's been tapped.
+在大多数的移动端浏览器上，当一个元素被点击后*悬停*与／或*聚焦*属性会被应用于其上。
 
-Consider carefully 
-what styles you set and how they will look to the user after
-they finish their touch.
+仔细的推敲你要设置什么样式以及用户完成触控之后，他们会呈现给用户什么样的外观。
 
-Bear in mind that anchor tags and buttons may have different behaviour in different browsers, so assume in some cases *hover* will remain and in others *focus* will remain.
+要谨记锚点标签和按钮可能在不同的浏览器中的响应行为是不一样的，因此我们假设在某些情况下*悬停* will remain and in others *focus* will remain.
 
-### Enabling Active State Support on iOS
+### 在iOS中启用激活状态支持
 
-Unfortunately, Safari on iOS does not apply the *active* state by default, to get it working you need to add a `touchstart` event listener to the *document body* or to each element.
+不幸的是，Safar在iOS上不能默认应用*active*状态，要想启用这个状态，你需要在*文档主体*或者每一个元素当中添加一个`touchstart`事件监听器。
 
-You should do this behind a user agent test so it's only run on iOS devices.
+你应在这么做之前使用用户的浏览器判别测试，从而让前述流程只在iOS设备上运行。
 
-Adding a touch start to the body has the advantage of applying to all elements in the DOM, however this may have performance issues when scrolling the page.
+在主体当中添加一个 touchstart 比将它应用于所有DOM元素这种方式要更有优势，但是这样可能会在滚动页面时造成表现性能上的一些问题。
 
 {% highlight js %}
 window.onload = function() {
@@ -82,7 +70,7 @@ window.onload = function() {
 };
 {% endhighlight %}
 
-The alternative is to add the touch start listeners to all the interactable elements in the page, alleviating some of the performance concerns.
+另一种方法是将 touchstart 监听器添加到页面上所有互动性元素中，缓解一些性能上的压力。 
 
 {% highlight js %}
 window.onload = function() {
@@ -96,44 +84,37 @@ window.onload = function() {
 };
 {% endhighlight %}
 
-### Override Default Browser Styles for Touch States
+### 为触摸状态覆盖默认的浏览方式
 
-Once you add styles for the different states, you'll notice that most browsers implement their own styles to respond to a user’s
-touch, you should override these defaults when you've added your own styles.
+当你为不同的状态添加样式时，你会注意到大多数的浏览器会对用户的触控反应实施他们自己设定的样式，当你想要加入自己样式时你应该覆盖改写掉这些默认设置。
 
 {% include modules/remember.liquid title="Remember" list=page.remember.override-default %}
 
-#### Override Tap Highlight Styles
+#### 覆盖点击高亮样式
 
-When mobile devices first launched, a number of sites didn’t have styling for
-the active state. As a result, many browsers add a highlight color or style to elements when a user touches them.
+当移动设备初次发布的时候，许多的网站还没有为激活状态进行适配。因此，许多浏览器为元素添加高亮颜色和样式应对用户的触摸。
 
-Safari and Chrome add a tap highlight color which can be prevented with the
-`-webkit-tap-highlight-color` CSS property:
+Safari和Chrome浏览器添加了一个高亮点击色，而且能够通过`-webkit-tap-highlight-color` CSS属性禁止高亮点击色：
 
 {% include_code ../_code/states-example.html webkit-specific css %}
 
-Internet Explorer on Windows Phone has a similar behavior, but is suppressed
-via a meta tag:
+Windows Phone设备上的Internet Explorer拥有相似的行为，但是其是通过对大尺寸的标签的点击来实现的：
 
 {% highlight html %}
 <meta name="msapplication-tap-highlight" content="no">
 {% endhighlight %}
 
-#### Override FirefoxOS Button State Styles
+#### 覆盖FirefoxOS的按键状态方式
 
-The Firefox `-moz-focus-inner` pseudo class includes an outline on touchable elements.
-You can remove this outline by setting the `border: 0`.
+Firefox的`-moz-focus-inner`伪类集包括了一个可触摸元素的outline。你可以通过设置`border: 0`来移除outline。
 
 If you are
-using a `<button>` element, you get a gradient applied to your button which you can remove by setting `background-image: none`.
-
+如果你正在使用一个`<button>`元素，你会得到一个应用于你的按键的gradient，你可以通过设置`background-image: none`移除这个gradient。
 {% include_code ../_code/states-example.html ff-specific css %}
 
-#### Override Element Outline in Focus State
+#### 覆盖聚焦状态下元素的Outline
 
-Suppress the outline color when an element is focused using `outline: 0`.
-
+在使用`outline: 0`让一个元素被聚焦的时候，淡化其他缩略图颜色。
 {% highlight css %}
 .btn:focus {
   outline: 0;
@@ -142,12 +123,9 @@ Suppress the outline color when an element is focused using `outline: 0`.
 }
 {% endhighlight %}
 
-### Disable user-select on UI which Responds to Touch
+### 使在用户界面上回应触摸的用户选择无效化
 
-Some mobile browsers will select text if the user long presses on the screen.
-This can result in a bad user experience if the user accidentally presses down
-on a button for too long. You can prevent this from happening using the
-`user-select` CSS property.
+如果用户在触摸屏上进行长按操作，一些浏览器将会选择文本。在用户偶然过久地按着一个按键的情况下，这会造成不良的用户体验。通过使用`user-select` CSS属性，你可以防止其发生。
 
 {% highlight css %}
 -moz-user-select: none;
@@ -158,9 +136,9 @@ user-select: none;
 
 {% include modules/remember.liquid title="Remember" list=page.remember.disable-user-select %}
 
-## Reference
+## 参考
 
-### Pseudo Classes for Touch States
+### 用于触摸状态的伪类
 
 <table class="table-3">
   <thead>
@@ -175,9 +153,7 @@ user-select: none;
       <td data-th="Class">:hover</td>
       <td data-th="Example"><img alt="Button in Pressed State" src="images/btn-hover-state.png"></td>
       <td data-th="Description">
-        This state is entered when a is cursor placed over an element.
-        Changes in UI on hover are helpful to encourage users to interact
-        with elements.
+        当光标悬停在一个元素上方时就会进入如此状态。用户界面中悬停状态产生的外观改变对鼓励用户和元素交互来说是非常有帮助的。
       </td>
     </tr>
     <tr>
@@ -186,10 +162,7 @@ user-select: none;
         <img alt="Button with Focus State" src="images/btn-focus-state.png">
       </td>
       <td data-th="Description">
-        When you tab through elements on a page, you are moving the focus
-        from one element to the next. The focus state allows the user to
-        know what element they are currently interacting with; also allows
-        users to navigate your UI easily using a keyboard.
+当你用tab切换遍一个页面上的元素时，这意味着你把元素的聚焦点在彼此之间切换。聚焦状态会让用户明白正在与之交互的元素。同时可以让用户简单地使用键盘操控你的用户界面。
       </td>
     </tr>
     <tr>
@@ -198,8 +171,7 @@ user-select: none;
         <img alt="Button in Pressed State" src="images/btn-pressed-state.png">
       </td>
       <td data-th="Description">
-        This is the state an element has when it's being selected, for
-        example a user clicking or touching an element.
+        这是一个元素被选择时的状态，例如当用户点击或者触摸一个元素时，元素就会如此显示。
       </td>
     </tr>
   </tbody>
