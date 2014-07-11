@@ -1,6 +1,6 @@
 # Web Fundamentals - Simplified Chinese
 
-## Page Distribution
+## Page Distribution - 80% translation complete, 20% left proofing to do.
 
 - [x] Getting Started **@lostlandark**
   - [x] Content Structure **@lostlandark**
