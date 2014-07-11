@@ -14,12 +14,12 @@
       - [x] Size content to the viewport **example**
       - [x] Use CSS media queries for responsiveness **example**
       - [x] How to choose breakpoints **example**
-    - [ ] Responsive Web Deisgn Patterns **@Pellegrino**
-      - [ ] Mostly fluid
-      - [ ] Column Drop
-      - [ ] Layout shifter
-      - [ ] Tiny tweaks
-      - [ ] Off canvas
+    - [x] Responsive Web Deisgn Patterns **@Pellegrino**
+      - [x] Mostly fluid **forgot**
+      - [x] Column Drop **forgot**
+      - [x] Layout shifter **forgot**
+      - [x] Tiny tweaks **forgot**
+      - [x] Off canvas **forgot**
     - [x] Navigation and Action Patterns **@Pellegrino**
       - [x] App bar **@somanybubububu**
       - [x] Tab bar **@somanybubububu**
@@ -35,9 +35,9 @@
     - [x] Choose the best input type **@tiger**
     - [x] Simplify checkout with requestAutocomplete API **@tiger**
     - [x] Grouping form fields **@tiger**
-  - [ ] Add Touch to Your Site  **@tiger**
-    - [ ] Stateful Elements Respond to Touch  **@tiger**
-    - [ ] Implement Custom Gestures  **@portrayals**
+  - [x] Add Touch to Your Site  **@tiger**
+    - [x] Stateful Elements Respond to Touch  **@tiger**
+    - [x] Implement Custom Gestures  **@portrayals**
 
 ---
 
@@ -72,7 +72,7 @@
 ---
 
 - [x] Resources **@somanybubububu**
-  - [ ] Glossary
-  - [ ] Samples
-  - [ ] Style guide
-  - [ ] Example article
+  - [x] Glossary
+  - [x] Samples
+  - [x] Style guide
+  - [x] Example article
