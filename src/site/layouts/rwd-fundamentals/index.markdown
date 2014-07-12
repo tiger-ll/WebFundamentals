@@ -12,25 +12,25 @@ rel:
 collection: multi-device-layouts
 key-takeaways:
   set-viewport:
-    - Use meta viewport tag to control the width and scaling of the browsers viewport.
-    - Include <code>width=device-width</code> to match the screen's width in device independent pixels.
-    - Include <code>initial-scale=1</code> to establish a 1:1 relationship between CSS pixels and device independent pixels.
-    - Ensure your page is accessible by not disabling user scaling.
+    - 使用meta标签viewport来控制浏览器的“视口viewport。
+    - 包括<code>width=device-width</code>以对应设备视窗的独立像素宽度。
+    - 包括<code>initial-scale=1</code> 来建立一个CSS像素与设备独立像素的1:1关系。
+    - 确认不禁用用户自我调节视窗大小功能。
   size-content-to-vp:
-    - Do not use large fixed width elements.
-    - Content should not rely on a particular viewport width to render well.
-    - Use CSS media queries to apply different styling for small and large screens.
+    - 不要使用大型固定宽度的元素。
+    - 内容不应依赖于一个特定的viewport来正常展示。
+    - 使用CSS media queries来应用不同的，适用于大小设备屏幕的样式。
   media-queries:
-    - Media queries can be used to apply styles based on device characteristics.
-    - Use <code>min-width</code> over <code>min-device-width</code> to ensure the broadest experience.
-    - Use relative sizes for elements to avoid breaking layout.
+    - media queries可以根据不同设备的特性来应用不同的样式。
+    - 使用 <code>min-width</code> over <code>min-device-width</code> 来保证最宽广的体验。
+    - 使用相对大小数值来设定元素大小，以防打乱布局。
   choose-breakpoints:
-    - Create breakpoints based on content, never on specific devices, products or brands.
-    - Design for the smallest mobile device first, then progressively enhance the experience as more screen real estate becomes available.
-    - Keep lines of text to a maximum of around 70 or 80 characters.
+    - 以断点为基础来创建内容，绝不可以基于特定的设备，产品以及品牌。
+    - 先为最小的设备设计，然后一步一步的强化体验同时支持更多的视口大小。
+    - 把每行的字数控制在70个到80个之间。
 remember:
   use-commas:
-    - Use a comma to separate attributes to ensure older browsers can properly parse the attributes.
+    - 使用逗号","来区分属性，并能保证老版本浏览器可以合理的解析这些属性。
 ---
 {% wrap content %}
 
@@ -232,7 +232,7 @@ Media queries 允许我们能创造一个自适应的体验，media query语句�
 
 在移动设备上，这两者看起来并没有太大的差别。因为大多数情况下用户并不能调整窗口的大小。但在桌面级设备上，用户希望页面的内容能够随着窗口的大小变化自动调整，使其显得更加自然。因此，你要尽量避免选用 `*-device-width`, 这样页面才能根据桌面浏览器窗口大小的变化进行调整
 
-### Use relative units
+### 使用相对单位
 
 自适应设计背后的重要概念，就是相对于固定宽度布局而言的流动性和比例性。 使用相对单位进行排版能帮助你简化布局并避免个别页面内容超过视口大小的情况发生。
 

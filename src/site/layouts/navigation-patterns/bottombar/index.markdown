@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "底边栏"
-description: "如果你正在开发一个web应用，而且App Bar承载不下用户可以执行的操作总数，最好的选择就是溢出它们都塞到底边栏里。"
+description: "如果你正在开发一个网络应用，而且应用程序栏承载不下用户可以执行的操作总数，最好的选择就是溢出它们都塞到底边栏里。"
 thumbnail: bottombar/images/bottombar.png
 article:
   written_on: 2014-01-01
@@ -11,12 +11,12 @@ rel:
   gplusauthor: https://plus.google.com/+MattGaunt
   twitterauthor: "@gauntface"
 collection: navigation-patterns
-introduction: "如果你正在开发一个web应用，而且App Bar承载不下用户可以执行的操作行为总数，最好的选择就是溢出它们都塞到底边栏里。"
+introduction: "如果你正在开发一个网络应用，而且应用程序栏承载不下用户可以执行的操作行为总数，最好的选择就是溢出它们都塞到底边栏里。"
 key-takeaways:
   bottom-bar:
     - 只在你没有使用选项卡的时候考虑使用这种方式。
     - 最多插入5项。
-    - 只有当你需要添加App bar承载不下的操作时使用。
+    - 只有当你需要添加应用程序栏承载不下的操作时使用。
 ---
 
 {% wrap content%}
@@ -27,11 +27,11 @@ key-takeaways:
 
 <div style="clear: both;"></div>
 
-我们已经知道了App Bar可用于放置操作行为。
+我们已经知道了应用程序栏可用于放置操作行为。
 
-对于很多站点，尤其是以内容为导向的站点来说，其空间对于相对较少的操作来说已经足够了。然而web应用会发现他们用户界面有更多的可操作部分。
+对于很多站点，尤其是以内容为导向的站点来说，其空间对于相对较少的操作来说已经足够了。然而网络应用会发现他们用户界面有更多的可操作部分。
 
-如果你没有使用选项卡，并且你需要在App bar中放入太多操作，就把这些操作放在底部的栏内。
+如果你没有使用选项卡，并且你需要在应用程序栏中放入太多操作，就把这些操作放在底部的栏内。
 
 {% include modules/takeaway.liquid list=page.key-takeaways.bottom-bar %}
 

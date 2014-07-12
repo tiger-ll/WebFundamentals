@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Markdown Guide"
-description: "Markdown guide and syntax used for this site."
+title: "Markdown指导"
+description: "Markdown指导及本站所用语法。"
 class: "page--styleguide"
 learning-list:
   - Lorem ipsum dolor sit amet
@@ -14,17 +14,17 @@ article:
 collection: resources
 key-takeaways:
   use-keytakeaway:
-    - It is pretty simple to add in a key takeaway
+    - 添加一个重点很简单
 remember:
   use-remember:
-    - It is pretty simple to add in a remember
+    - 添加一个记住很简单
 related:
   related-content:
-    - <a href="index.html">Style Guide</a>
-    - <a href="../example-article/">Example Article</a>
+    - <a href="index.html">样式指导</a>
+    - <a href="../example-article/">示例文章</a>
 ---
 {% comment %}
-NOTE: This is our styleguide
+注意：这是我们的样式指导
 {% endcomment %}
 
 {% wrap content %}
@@ -35,25 +35,25 @@ NOTE: This is our styleguide
 
 {% include modules/toc.liquid %}
 
-## Headings
+## 标题
 
-Styles for Headings
+标题样式
 
-# #h1 heading
+# #一级标题
 
-## ##h2 heading
+## ##二级标题
 
-### ###h3 heading
+### ###三级标题
 
-#### ####h4 heading
+#### ####四级标题
 
-##### #####h5 heading
+##### #####五级标题
 
-## Code
+## 代码
 
-Styles for how to include code into the documents.
+如何将代码插入文档的样式。
 
-### Inline code with no sample
+### 无示例的的行内代码
 
   {{ "&#123;% highlight html %&#125;" }}
 
@@ -73,75 +73,75 @@ Styles for how to include code into the documents.
 </html>
 {% endhighlight %}
 
-### Include Javascript
+### 插入Javascript
 
   {{ "&#123;% include_code _code/test.js testjs javascript %&#125;" }}
 
 {% include_code _code/test.js somejs javascript %}
 
 
-### Include HTML
+### 插入HTML
 
   {{ "&#123;% include_code _code/test.html testhtml html %&#125;" }}
 
 {% include_code _code/test.html somehtml html %}
 
 
-### Include CSS
+### 插入CSS
 
   {{ "&#123;% include_code _code/test.css testcss css %&#125;" }}
 
 {% include_code _code/test.css somecss css %}
 
-### Link to sample
+### 链接到示例
 
   {{ "&#123;% link_sample _code/test.html %&#125;See sample&#123;% endlink_sample %&#125;" }}
 
 {% link_sample _code/test.html %}See sample{% endlink_sample %}
 
-## Callouts
+## 标注
 
-Using Callouts in your doc is easy.
+在你的文档中使用标注轻而易举。
 
-### Key takeaway
+### 重点
 
     {{ "{% include modules/takeaway.liquid" }}
     	list=page.key-takeaways.use-keytakeaway %}
 
-In your Article YAML Preamble
+在你文章的YAML导言中
 
     key-takeaways:
 	  use-keytakeaway:
-	    - It is pretty simple to add in a key takeaway
+	    - 添加一个重点很简单
 
 {% include modules/takeaway.liquid list=page.key-takeaways.use-keytakeaway %}
 
-### Remember
+### 记住
 
     {{ "{% include modules/remember.liquid" }}
     	list=page.remember.use-remember %}
 
-In your Article YAML Preamble
+在你文章的YAML导言中
 
     remember:
 	  use-remember:
-	    - It is pretty simple to add in a remember
+	    - 添加一个记住很简单
 
 {% include modules/remember.liquid list=page.remember.use-remember %}
 
 
-### Related Content
+### 相关内容
 
     {{ "{% include modules/related.liquid" }}
       list=page.related.related-content %}
 
-In your Article YAML Preamble
+在你文章的YAML导言中
 
 {% highlight yaml %}
 related:
   related-content:
-    - <a href="index.html">Style Guide</a>
-    - <a href="../example-article/">Example Article</a>
+    - <a href="index.html">样式指导</a>
+    - <a href="../example-article/">示例文章</a>
 {% endhighlight %}
 
 {% include modules/related.liquid list=page.related.related-content %}

@@ -1,16 +1,9 @@
 ---
-layout: article
-title: "Video"
-description: "Learn about the simplest ways to add video to your site and ensure users
-              get the best possible experience on any device."
-introduction: "Users like videos; they can be fun, informative.
-               On mobile devices, videos can be an easier way to consume information.
-               But videos take bandwidth;
-               they don't always work the same across every platform.
-               Users don't like waiting for videos to load,
-               or when they press play and nothing happens.
-               Read more to find the simplest way to add video to your site and
-               ensure users get the best possible experience on any device."
+layout: section
+title: "视频"
+description: "学习最简单的向网站添加视频的方法，并让用户
+              在任何设备上都能享受到最佳体验。"
+introduction: "用户喜欢视频；它们可以很有趣并且内容丰富。在移动设备上，视频更容易传递信息。但是视频很占带宽，而且不能在任何平台上都正常工作。用户不喜欢等待视频加载，或者当他们按下播放的时候却毫无反应。阅读更多细节来了解最简单的向网站添加视频的方法，并让用户在任何设备上都能享受到最佳体验。"
 article:
   written_on: 2014-04-16
   updated_on: 2014-04-29
@@ -19,21 +12,20 @@ collection: introduction-to-media
 id: videos
 key-takeaways:
   add-a-video:
-    - Use the video element to load, decode, and play video on your site.
-    - Produce video in multiple formats to cover a range of mobile platforms.
-    - Size videos correctly; ensure they don't overflow their containers.
-    - Accessibility matters; add the track element as a child of the video element.
+    - 在你的网站上使用video元素来加载、解码并播放视频。
+    - 为你的视频创建多种格式来覆盖更多的移动平台。
+    - 正确缩放你的视频，保证它们不会从容器中溢出。
+    - 可访问性事宜：在video元素中添加track子元素。
 remember:
   media-fragments:
-    - The Media Fragments API is supported on most platforms, but not on iOS.
-    - Make sure Range Requests are supported by your server. Range Requests are enabled by default on most servers, but some hosting services may turn them off.
+    - 大多数平台都支持Media Fragments API，不过IOS不支持。
+    - 确保你的服务器支持Range Requests。大部分服务器默认支持Range Requests，但是某些服务器可能会将其关闭。
   dont-overflow:
-    - Don't force element sizing that results in an aspect ratio different from the original
-      video. Squashed or stretched looks bad.
+    - 不要强制设定元素大小，以免导致其长宽比与原始视频不同。拉伸或者压缩看起来都很糟糕。
   accessibility-matters:
-    - The track element is supported on Chrome for Android, iOS Safari, and all current browsers on desktop except Firefox (see <a href="//caniuse.com/track" title="Track element support status">caniuse.com/track</a>). There are several polyfills available too. We recommend <a href='//www.delphiki.com/html5/playr/' title='Playr track element polyfill'>Playr</a> or <a href='//captionatorjs.com/' title='Captionator track'>Captionator</a>.
+    - 安卓Chrome、iOS Safari和除FireFox之外（参见<a href="http://caniuse.com/track" title="Track元素支持现状">caniuse.com/track</a>）的所有现有的桌面浏览器都支持track元素。也有一些可用的polyfill。我们推荐<a href='//www.delphiki.com/html5/playr/' title='Playr track element polyfill'>Playr</a>或者<a href='//captionatorjs.com/' title='Captionator track'>Captionator</a>。
   construct-video-streams:
-    - MSE is supported by Chrome and Opera on Android, and in Internet Explorer 11 and Chrome for desktop, with support planned for <a href='//wiki.mozilla.org/Platform/MediaSourceExtensions' title='Firefox Media Source Extensions implementation timeline'>Firefox</a>.
+    - 安卓的Chrome和Opera，以及IE11和桌面Chrome支持MSE，<a href='http://wiki.mozilla.org/Platform/MediaSourceExtensions' title='Firefox Media Source Extensions implementation timeline'>Firefox准备支持它</a>。
   optimize:
     - <a href="../images/">Images</a>
     - <a href="../../performance/optimizing-content-efficiency/">Optimizing content efficiency</a>
@@ -41,24 +33,9 @@ remember:
 
 {% wrap content%}
 
-<style>
-
-  img, video, object {
-    max-width: 100%;
-  }
-
-  img.center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-</style>
-
-{% for guide in page.articles.videos %}
-1. [{{guide.title}}]({{site.baseurl}}{{guide.url | clean}}) &mdash;
-{{guide.description}}
-{% endfor %}
+<div class="media media--video">
+  <iframe src="https://www.youtube.com/embed/j5fYOYrsocs?controls=2&modestbranding=1&showinfo=0" frameborder="0" allowfullscreen=""></iframe>
+</div>
 
 {% include modules/nextarticle.liquid %}
 

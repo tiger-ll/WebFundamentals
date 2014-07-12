@@ -5,7 +5,7 @@ description: "对任何网站来讲, 网站的内容一直都是最重要的因�
 introduction: "对任何网站来讲, 网站的内容一直都是最重要的因素。因此，我们应该为了内容而设计而不是由设计决定内容。在这个指南中，我们先确定我们需要的内容，在此内容的基础上创建一个页面结构，然后在简单的能够适应任何宽度的线性布局中进行展示。"
 notes:
   styling:
-    - Styling will come later
+    - 样式稍后再加
 article:
   written_on: 2014-04-17
   updated_on: 2014-04-23
@@ -14,21 +14,21 @@ collection: multi-screen
 related-guides:
   create-amazing-forms:
     -
-      title: Create amazing forms
+      title: 创造强大的表格
       href: input/form-input/
       section:
         id: user-input
         title: "Forms"
         href: input/form-input/
     -
-      title: Label and name inputs correctly
+      title: 正确的标签与命名输入栏
       href: input/form-input/label-and-name-inputs.html
       section:
         id: user-input
         title: "Forms"
         href: input/form-input/
     -
-      title: Choose the best input type
+      title: 选择最好的输入方式
       href: input/form-input/choose-the-best-input-type.html
       section:
         id: user-input
@@ -36,21 +36,21 @@ related-guides:
         href: input/form-input/
   video:
     -
-      title: Using video effectively
+      title: 更有效的使用视频
       href: media/video/
       section:
         id: introduction-to-media
         title: "Video"
         href: media/
     -
-      title: Change the starting position
+      title: 自定义视频播放点
       href: media/video/
       section:
         id: introduction-to-media
         title: "Video"
         href: media/
     -
-      title: Include a poster image
+      title: 插入海报图片
       href: media/video/
       section:
         id: introduction-to-media
@@ -58,21 +58,21 @@ related-guides:
         href: media/
   images:
     -
-      title: Using images effectively
+      title: 更有效的使用图片
       href: media/images/
       section:
         id: introduction-to-media
         title: "Images"
         href: media/
     -
-      title:  Correct use of images in markup
+      title: 在标记中正确使用图片
       href: media/images/#images-in-markup
       section:
         id: introduction-to-media
         title: "Images"
         href: media/
     -
-      title: Image optimization
+      title: 图片优化
       href: performance/optimizing-content-efficiency/image-optimization.html
       section:
         id: introduction-to-media
