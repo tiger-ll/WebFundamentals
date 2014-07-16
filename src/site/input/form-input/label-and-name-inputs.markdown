@@ -92,20 +92,19 @@ user](https://support.google.com/chrome/answer/142893)，并且，通过在输�
 
 {% include_code _code/order.html autocomplete %}
 
-
-### Recommended input `name` and `autocomplete` attribute values
+### 推荐的 `name` 和 `autocomplete` 输入属性值
 
 <table class="table-3 autocompletes">
   <thead>
     <tr>
-      <th data-th="Content type">Content type</th>
-      <th data-th="name attribute"><code>name</code> attribute</th>
-      <th data-th="autocomplete attribute"><code>autocomplete</code> attribute</th>
+      <th data-th="Content type">内容类型</th>
+      <th data-th="name attribute"><code>name</code> 属性</th>
+      <th data-th="autocomplete attribute"><code>autocomplete</code>属性</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td data-th="Content type">Name</td>
+      <td data-th="Content type">姓名</td>
       <td data-th="name attribute">
         <code>name</code>
         <code>fname</code>
@@ -115,12 +114,12 @@ user](https://support.google.com/chrome/answer/142893)，并且，通过在输�
       <td data-th="autocomplete attribute"><code>name</code></td>
     </tr>
     <tr>
-      <td data-th="Content type">Email</td>
+      <td data-th="Content type">电邮</td>
       <td data-th="name attribute"><code>email</code></td>
       <td data-th="autocomplete attribute"><code>email</code></td>
     </tr>
     <tr>
-      <td data-th="Content type">Address</td>
+      <td data-th="Content type">地址</td>
       <td data-th="name attribute">
         <code>address</code>
         <code>city</code>
@@ -141,7 +140,7 @@ user](https://support.google.com/chrome/answer/142893)，并且，通过在输�
       </td>
     </tr>
     <tr>
-      <td data-th="Content type">Phone</td>
+      <td data-th="Content type">电话</td>
       <td data-th="name attribute">
         <code>phone</code>
         <code>mobile</code>
@@ -154,7 +153,7 @@ user](https://support.google.com/chrome/answer/142893)，并且，通过在输�
       <td data-th="autocomplete attribute"><code>tel</code></td>
     </tr>
     <tr>
-      <td data-th="Content type">Credit Card</td>
+      <td data-th="Content type">信用卡</td>
       <td data-th="name attribute">
         <code>ccname</code>
         <code>cardnumber</code>
